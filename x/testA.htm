@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta lang="en-us" >
+    <meta charset="utf-8">
+    <title>test site</title>
+    <link rel="stylesheet" href="testA.css">
+    <script src="TTB.js"></script>
+</head>
+
+<body>
+    <nav id="navbar">
+    </nav>
+    <div id="output">
+        <div id="TTB">
+            <p class="question"> The Test Box</p>
+            <div id="TTBcontainer">
+                <label for="Length" class="message entry">Test in</label>
+                <input type="text" name="test" value="" id="input_text" onblur="window.test()">
+            </div>
+            <div id="TTBcontainer">
+                <label for="Area" class="message entry">Test out</label>
+                <input type="text" name="testout" value="" id="output_text" readonly> <br>
+            </div>
+            <p class="message bottom" onclick=""> </p>
+        </div>
+    </div>
+    <script>
+        var pageinfo = {
+            "navElementNames":["v1","v2","v3","v4","V5","v7","filler text"],
+        }
+
+        var navBuild = []
+        var navLen = pageinfo.navElementNames.length
+
+        for (i of pageinfo.navElementNames) {
+            navBuild.push(['<li><a href="">',i,'</a></li>'].join(""))
+        }
+
+        //builds nav
+        document.getElementById("navbar").innerHTML = ['<ul>',navBuild.join(""),'</ul'].join("");
+        
+        document.styleSheets[0].cssRules[3].style.width = [100/navLen,"%"].join("")
+    </script>
+</body> 
+

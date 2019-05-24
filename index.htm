@@ -1,15 +1,57 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <a href="style.css"></a>
-    <script src="code.js"></script>
-    
-
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-    <body>
-        <canvas id="game" width="750" height="415" ></canvas>
-    </body>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li id="q1">
+                <p>Question 4-1</p>
+            </li>
+            <li id="q2">
+                <p>Question 4-2</p>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id='mpgBlock'>
+            <h1>Calculate Miles Per Gallon</h1>
+            <label for="miles">Miles Driven:</label>
+            <input type="text" id="miles"><br>
+            <label for="gallons">Gallons of Gas Used:</label>
+            <input type="text" id="gallons"><br>
+            <label for="mpgx">Miles Per Gallon</label>
+            <input type="text" id="mpg" disabled><br>
+            <label>&nbsp;</label>
+            <input type="button" id="calculate" value="Calculate MPG" onclick="window.processEntries()"><br>
+            <label>&nbsp;</label>
+            <input type="button" id="clear" value="Clear Entries" onclick="window.clearEntries()"><br>
+        </div>
+
+        <div id='fvcBlock'>
+            <h1>Future Value Calculator</h1>
+            
+            <label for="investment">Total Investment:</label>
+            <input type="text" id="investment"><br>
+            
+            <label for="rate">Annual Interest Rate:</label>
+            <input type="text" id="rate">%<br>
+            
+            <label for="years">Number of Years:</label>
+            <input type="text" id="years"><br>
+            
+            <label for="future_value">Future Value:</label>
+            <input type="text" id="future_value" disabled><br>
+            
+            <label>&nbsp;</label>
+            <input type="button" id="fvCalculate" value="Calculate"><br>      
+        </div>
+    </main>
+</body>
 </html>
