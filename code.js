@@ -1,6 +1,6 @@
 
-var canvas 
-var ctx 
+var canvas ;
+var ctx ;
 var testObj = {};
 
 window.onload = function(){
@@ -123,6 +123,25 @@ window.onload = function(){
             updateTrack()
         }
     }
+    loadNotes = () => {
+        var note = new Image()
+
+        note.src = "skin/note.png";
+        
+        var i = 0;
+        var pX = 0;
+        var pY = 0;
+        function animate(){
+            pX = pX - 1;
+            
+            ctx.drawImage(note,gameBgPosLeft+track.BorderWidth,pY,track.keyWidth,$ph(5));
+            requestAnimationFrame(animate);
+            }
+            
+        requestAnimationFrame(animate);
+    
+    }
+    loadNotes()
 }
 
 
