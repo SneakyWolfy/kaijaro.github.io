@@ -6,3 +6,8 @@
 body {
     background-color: rgb(94, 85, 85);
 }
+
+#game {
+    display: block;
+    margin: 0 auto;
+}

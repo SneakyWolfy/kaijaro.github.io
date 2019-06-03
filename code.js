@@ -37,7 +37,7 @@ window.onload = function(){
         BgWidth:$pw(36),
         BorderWidth:$pw(1),
         keyWidth:$pw(36)/4,
-        keyHeight:$ph(10)
+        keyHeight:$ph(20)
     }
 
     var gameBgPosLeft=canvas.width/2-track.BgWidth/2-(track.BorderWidth/2);
@@ -59,18 +59,13 @@ window.onload = function(){
         rect(0,0,canvas.width,canvas.height,bgColor);
         //setting background
 
-        //building track outlines
         
-
-        rect(gameBgPosLeft,0,track.BorderWidth,canvas.height,track.color);
-        rect(gameBgPosRight,0,track.BorderWidth,canvas.height,track.color);
-
         //building track keys
 
         //console.log(track);
         for (var j=0;j<4;j++){
-            var c = ctx.createImageData(track.keyWidth, track.keyHeight);
-            var cA = ctx.createImageData(track.keyWidth, track.keyHeight);
+            var c = ctx.createImageData(parseInt(track.keyWidth)+1, track.keyHeight);
+            var cA = ctx.createImageData(parseInt(track.keyWidth)+1, track.keyHeight);
             var i;
             for (i = 0; i < c.data.length; i += 4) {
                 c.data[i+0] = track.RedPassive;
@@ -88,9 +83,14 @@ window.onload = function(){
             columnInputActive[j]=cA;
         }
 
-        for (var i=0;i<4;i++){
-            ctx.putImageData(columnInput[i], gameBgPosLeft+i*track.keyWidth+track.BorderWidth,canvas.height-track.keyHeight);
-        }
+        updateTrack()
+
+        //building track outlines
+        
+
+        rect(gameBgPosLeft,0,track.BorderWidth,canvas.height,track.color);
+        rect(gameBgPosRight,0,track.BorderWidth,canvas.height,track.color);
+
     }
 
     setUpTest()
@@ -102,7 +102,7 @@ window.onload = function(){
     
     function updateTrack(){
         for (var i=0;i<4;i++){
-            ctx.putImageData(columnInput[i], gameBgPosLeft+i*track.keyWidth+track.BorderWidth,canvas.height-track.keyHeight);
+            ctx.putImageData(columnInput[i], gameBgPosLeft+i*track.keyWidth+track.BorderWidth,canvas.height-track.keyHeight+1);
         }
     }
 
@@ -114,7 +114,7 @@ window.onload = function(){
             updateTrack()
         }
     }
-    
+
     function KeyboardupEvent(ev){
         key = ev.code;
         if (keybinds.includes(key)){
@@ -123,8 +123,8 @@ window.onload = function(){
             updateTrack()
         }
     }
-    
 }
+
 
 //tasks:
 
