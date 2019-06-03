@@ -7,54 +7,122 @@ window.onload = function(){
     var canvas = document.getElementById("game");
     var ctx = canvas.getContext("2d");
 
+    var columnInput0;
+    var columnInput1;
+    var columnInput2;
+    var columnInput3;
+
+    var columnInput = [columnInput0,columnInput1,columnInput2,columnInput3];
+    var columnInputActive = [];
+    var columnInputPassive = [];
+    var debounce = [true,true,true,true];
+
+    gw=canvas.width
+    $pw = (f) => {
+        return (f/100)*gw;
+    }
+    gh=canvas.height
+    $ph = (f) => {
+        return (f/100)*gh;
+    }
+
+    var track = {
+        color:'#3e3e40',
+        RedPassive:'62',
+        GreenPassive:'62',
+        BluePassive:'64',
+        RedActive:'100',
+        GreenActive:'100',
+        BlueActive:'106',
+        BgWidth:$pw(36),
+        BorderWidth:$pw(1),
+        keyWidth:$pw(36)/4,
+        keyHeight:$ph(10)
+    }
+
+    var gameBgPosLeft=canvas.width/2-track.BgWidth/2-(track.BorderWidth/2);
+    var gameBgPosRight=canvas.width/2+track.BgWidth/2+(track.BorderWidth/2);
+    
+
+
+
     function rect(leftX,topY,width,height,drawColor) {
         ctx.fillStyle = drawColor;
         ctx.fillRect(leftX,topY,width,height);
+        
     }
 
     function setUpTest(){
-        gw=canvas.width
-        $pw = (f) => {
-            return (f/100)*gw;
-        }
-        gh=canvas.height
-        $ph = (f) => {
-            return (f/100)*gh;
-        }
+
         
         var bgColor="#101010";
         rect(0,0,canvas.width,canvas.height,bgColor);
         //setting background
 
         //building track outlines
-        var trackcolor='#3e3e40';
-        var trackBgWidth=$pw(36);
-        var trackBorderWidth=$pw(1);
-
-        var gameBgPosLeft=canvas.width/2-trackBgWidth/2-(trackBorderWidth/2);
-        var gameBgPosRight=canvas.width/2+trackBgWidth/2+(trackBorderWidth/2);
         
-        rect(gameBgPosLeft,0,trackBorderWidth,canvas.height,trackcolor);
-        rect(gameBgPosRight,0,trackBorderWidth,canvas.height,trackcolor);
+
+        rect(gameBgPosLeft,0,track.BorderWidth,canvas.height,track.color);
+        rect(gameBgPosRight,0,track.BorderWidth,canvas.height,track.color);
 
         //building track keys
-        var keyColor = trackcolor;
-        var keyWidth = trackBgWidth/4;
 
-        var keyHeight = $ph(10);
+        //console.log(track);
+        for (var j=0;j<4;j++){
+            var c = ctx.createImageData(track.keyWidth, track.keyHeight);
+            var cA = ctx.createImageData(track.keyWidth, track.keyHeight);
+            var i;
+            for (i = 0; i < c.data.length; i += 4) {
+                c.data[i+0] = track.RedPassive;
+                c.data[i+1] = track.GreenPassive;
+                c.data[i+2] = track.BluePassive;
+                c.data[i+3] = 255;
+
+                cA.data[i+0] = track.RedActive;
+                cA.data[i+1] = track.GreenActive;
+                cA.data[i+2] = track.BlueActive;
+                cA.data[i+3] = 255;
+            }
+            columnInput[j]=c;
+            columnInputPassive[j]=c;
+            columnInputActive[j]=cA;
+        }
+
         for (var i=0;i<4;i++){
-            rect(gameBgPosLeft+i*keyWidth+trackBorderWidth,canvas.height-keyHeight,keyWidth,keyHeight,keyColor)
+            ctx.putImageData(columnInput[i], gameBgPosLeft+i*track.keyWidth+track.BorderWidth,canvas.height-track.keyHeight);
         }
     }
 
     setUpTest()
 
-    addEventListener("keydown",KeyboardEvent);
+    var keybinds = ["KeyD","KeyF","KeyJ","KeyK"]
     
-    function KeyboardEvent(ev){
-        console.log(ev)
+    addEventListener("keydown",KeyboardEvent);
+    addEventListener("keyup",KeyboardupEvent);
+    
+    function updateTrack(){
+        for (var i=0;i<4;i++){
+            ctx.putImageData(columnInput[i], gameBgPosLeft+i*track.keyWidth+track.BorderWidth,canvas.height-track.keyHeight);
+        }
     }
 
+    function KeyboardEvent(ev){      
+        key = ev.code;
+        if (keybinds.includes(key) && debounce[keybinds.indexOf(key)]){//[keybinds.indexOf(key)]
+            debounce[keybinds.indexOf(key)] = false;
+            columnInput[keybinds.indexOf(key)] = columnInputActive[keybinds.indexOf(key)]
+            updateTrack()
+        }
+    }
+    
+    function KeyboardupEvent(ev){
+        key = ev.code;
+        if (keybinds.includes(key)){
+            debounce[keybinds.indexOf(key)] = true;
+            columnInput[keybinds.indexOf(key)] = columnInputPassive[keybinds.indexOf(key)]
+            updateTrack()
+        }
+    }
     
 }
 
@@ -95,6 +163,17 @@ window.onload = function(){
 
 //sfx
 ///aditional polish basically
+
+
+
+
+//things i'll probably need
+
+//load image object (same as audio object)
+
+//var image = new Image()
+//image.scr = "image.png"
+
 
 
 
