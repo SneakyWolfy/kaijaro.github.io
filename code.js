@@ -40,6 +40,7 @@ window.onload = function(){
         keyHeight:$ph(20)
     }
 
+    var bgColor="#101010";
     var gameBgPosLeft=canvas.width/2-track.BgWidth/2-(track.BorderWidth/2);
     var gameBgPosRight=canvas.width/2+track.BgWidth/2+(track.BorderWidth/2);
     
@@ -55,8 +56,8 @@ window.onload = function(){
     function setUpTest(){
 
         
-        var bgColor="#101010";
-        rect(0,0,canvas.width,canvas.height,bgColor);
+        
+        
         //setting background
 
         
@@ -87,10 +88,7 @@ window.onload = function(){
 
         //building track outlines
         
-
-        rect(gameBgPosLeft,0,track.BorderWidth,canvas.height,track.color);
-        rect(gameBgPosRight,0,track.BorderWidth,canvas.height,track.color);
-
+        
     }
 
     setUpTest()
@@ -111,7 +109,7 @@ window.onload = function(){
         if (keybinds.includes(key) && debounce[keybinds.indexOf(key)]){//[keybinds.indexOf(key)]
             debounce[keybinds.indexOf(key)] = false;
             columnInput[keybinds.indexOf(key)] = columnInputActive[keybinds.indexOf(key)]
-            updateTrack()
+            //updateTrack()
         }
     }
 
@@ -120,10 +118,10 @@ window.onload = function(){
         if (keybinds.includes(key)){
             debounce[keybinds.indexOf(key)] = true;
             columnInput[keybinds.indexOf(key)] = columnInputPassive[keybinds.indexOf(key)]
-            updateTrack()
+            //updateTrack()
         }
     }
-    loadNotes = () => {
+    main = () => {
         var note = new Image()
 
         note.src = "skin/note.png";
@@ -132,16 +130,29 @@ window.onload = function(){
         var pX = 0;
         var pY = 0;
         function animate(){
-            pX = pX - 1;
-            
+            //background
+            rect(0,0,canvas.width,canvas.height,bgColor);
+            //bg effects
+            //keys
+            pY = pY + 5;
             ctx.drawImage(note,gameBgPosLeft+track.BorderWidth,pY,track.keyWidth,$ph(5));
+            
+            //border
+            rect(gameBgPosLeft,0,track.BorderWidth,canvas.height,track.color);
+            rect(gameBgPosRight,0,track.BorderWidth,canvas.height,track.color);
+
+            
+            //notes
+            updateTrack()
+            
+            //effects
             requestAnimationFrame(animate);
             }
-            
+        //console.log(performance.now());
         requestAnimationFrame(animate);
     
     }
-    loadNotes()
+    main()
 }
 
 
