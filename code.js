@@ -17,6 +17,8 @@ window.onload = function(){
     var columnInputPassive = [];
     var debounce = [true,true,true,true];
 
+    var lines = []
+
     gw=canvas.width
     $pw = (f) => {
         return (f/100)*gw;
@@ -123,8 +125,10 @@ window.onload = function(){
     }
     main = () => {
         var note = new Image()
+        var line = new Image()
 
         note.src = "skin/note.png";
+        line.src = "skin/note.png";
         
         var i = 0;
         var pX = 0;
@@ -133,6 +137,8 @@ window.onload = function(){
             //background
             rect(0,0,canvas.width,canvas.height,bgColor);
             //bg effects
+            //timing lines
+            drawLines()
             //keys
             pY = pY + 5;
             ctx.drawImage(note,gameBgPosLeft+track.BorderWidth,pY,track.keyWidth,$ph(5));
@@ -150,7 +156,25 @@ window.onload = function(){
             }
         //console.log(performance.now());
         requestAnimationFrame(animate);
-    
+        setInterval(function(){
+            createLine()
+        },400)
+
+        function createLine(){
+            lines = lines.filter(function(value, index, arr){
+                return value > pY-canvas.height;
+            });
+            lines.push(pY);
+            console.log(lines,pY+canvas.height)
+        }
+
+        function drawLines(){
+            
+            for (l of lines){
+                
+                ctx.drawImage(line,gameBgPosLeft+track.BorderWidth,pY-l,track.keyWidth*4,1);
+            }
+        }
     }
     main()
 }
