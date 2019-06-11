@@ -10,4 +10,16 @@ body {
 #game {
     display: block;
     margin: 0 auto;
+    width: 100%;
+    height: 90%;
+}
+li {
+    float: left;
+    width: 16.666666666666666666666666666666666666666666666666666666666666666666666666%;
+    display: block;
+    background: rgb(10, 10, 10);
+    height: 5%;
+    color: aliceblue;
+    font-size: 2em;
+    text-align: center;
 }
