@@ -1,27 +1,129 @@
 body {
     background: black;
+    margin: 0;
 }
 
-header {
+#Title {
+    margin: 10% 0 20%;
+    padding: 0;
     display: block;
     width: 100%;
-    height: 2em;
-    background: rgb(17, 17, 17);
+    background: rgba(17, 17, 17, 0);
     color: aliceblue;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-top: 2px aliceblue solid;
+    border-bottom: 2px aliceblue solid;
 }
 
+.main-button {
+    position: absolute;
+    border: 2px aliceblue solid;
+    border-radius: 1em;
+    background: rgba(17, 17, 17, 0);
+    color: aliceblue;
+    margin: 0 0 0 50%;
+    font-size: 3em;
+    width: 300px;
+    transition: background .4s, color .4s; 
+    padding: .1em;
+}
+
+#play-button{
+    top: 50%;
+    transform: translate(-150px,0);
+}
+
+#option-button{
+    top: 50%;
+    transform: translate(-150px,2em)
+
+}
+
+.main-button:hover{
+    background:aliceblue;
+    color:rgb(17, 17, 17);
+}
+
+.screen1 {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.screen2 {
+    display:none;
+}
+
+#song-container{
+    overflow: hidden;
+    position: absolute;
+    width: 30%;
+    border-right: 2px solid aliceblue;
+    height: 100%;
+}
+#song-overflow{
+    width: 100%;
+    height: 100%;
+    padding-right: 17px;
+    overflow-y: scroll;
+    box-sizing: content-box;
+    
+}
+.song{
+    padding-right: 17px;
+    overflow: hidden;
+    box-sizing: content-box;
+    width:100%;
+    background-color: rgba(17, 17, 17, 0);
+    color: aliceblue;
+    font-size: 1.25em;
+    padding: 2em 17px 2em 0;
+    border: none;
+    border-bottom: 2px aliceblue solid;
+}
 header p {
     position: relative;
-    top: 50%;
-    transform: translate(0,-19px);
     display: block;
-    margin: auto 0;
+    margin: .5em 0;
 }
 
-button {
-    width: 100%;
-    height: 5em;
+.popAni{
+    animation-name: 'pop';
+    animation-duration: .5s;
+}
+
+@keyframes pop{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,0);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,-35.8px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
+
+.fadeOutAni{
+    animation-name: 'fadeOut';
+    animation-duration: 1s;
+
+}
+
+.fadeInAni{
+    animation-name: 'fadeIn';
+    animation-duration: 1s;
+}
+@keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

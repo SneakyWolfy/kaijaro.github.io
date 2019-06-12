@@ -32,7 +32,7 @@ window.onload = function(){
     }
 
     var trackNotes = [[],[],[],[]]
-    var songUrl = "https://api.myjson.com/bins/ae6ud"
+    var songUrl = "https://api.myjson.com/bins/pgo5x"
     var track = {
         color:'#ffffff',
         RedPassive:'0',
@@ -122,9 +122,10 @@ window.onload = function(){
             updateTrack()
         }
         setUpKeyValues()
-        var keybinds = ["KeyD","KeyF","KeyJ","KeyK"]
+        var keybinds = ["KeyA","KeyS","KeyD","KeyF"]
         addEventListener("keydown",KeyboardEvent);
         addEventListener("keyup",KeyboardupEvent);
+        
         function updateTrack(){
             for (var i=0;i<4;i++){
                 ctx.putImageData(columnInput[i], gameBgPosLeft+i*track.keyWidth+track.BorderWidth,canvas.height-track.keyHeight+1);

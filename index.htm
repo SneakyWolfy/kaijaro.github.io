@@ -5,16 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="MenuStyle.css">
+    <link rel="stylesheet" href="styles/menu-style.css">
+    <script src="code/menu-code.js"></script>
 </head>
     <body>
-        <header>
+        <header id='Title' class="screen1">
             <p>Taps</p>
         </header>
-        <main>
-            <button onclick="StartGame('wdwdw','wdwd')">
-                song1
+
+        <main class="screen1" id="main-options-list">
+            <button class="screen1 main-button" id="play-button" onclick="window.aniPlayBtn()">
+                Play
             </button>
+            <button class="screen1 main-button" id="option-button" onclick="">
+                Options
+            </button>
+        </main>
+
+        <main id="screen2" class="screen2">
+            
+            <div id="song-container">
+                <div id="song-overflow">
+                    <button id='Song1' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
+                        Veritas - presti
+                    </button>
+                    <button id='Song2' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
+                        Tomorrow Perfume (tpz Despair Remix)
+                    </button>
+                    <button id='Song3' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
+                        HAELEQUIN - orangentle / Yu_Asahina
+                    </button>
+                    <button id='Song4' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
+                        Yeah Boy - Shooting Stars - BaconAkin
+                    </button>
+                </div>
+            </div>
+
+        </main>
+
         <script>
             function StartGame(url,name){
                 console.log(url)
