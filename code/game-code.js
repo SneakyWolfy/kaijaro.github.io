@@ -5,11 +5,10 @@ var $ = (id) => {
 
 window.onload = function(){
     console.log(sessionStorage.getItem('test'))
-    var globalOffset=88
-    var TrackAudio = new Audio('audio.mp3')
-    var HitNormal = new Audio('Closed-Hi-Hat-1.wav')
-    TrackAudio.volume = .5
-    var MissSoundEffect = new Audio('Quack Sound Effect.mp3')
+    var globalOffset=115
+    var HitNormal = new Audio('../hit-sounds/hitnormal.wav')
+    var TrackAudio;
+    var MissSoundEffect = new Audio('../hit-sounds/miss.mp3')
     var canvas = document.getElementById("game");
     var ctx = canvas.getContext("2d");
     var columnInput0;
@@ -26,13 +25,14 @@ window.onload = function(){
     var $pw = (f) => {
         return (f/100)*gw;
     }
+
     var gh=canvas.height
     var $ph = (f) => {
         return (f/100)*gh;
     }
-    var ctx ;
+
     var trackNotes = [[],[],[],[]]
-    var songUrl = "https://api.myjson.com/bins/b3su1"
+    var songUrl = "https://api.myjson.com/bins/ae6ud"
     var track = {
         color:'#ffffff',
         RedPassive:'0',
@@ -56,6 +56,9 @@ window.onload = function(){
         return response.json()
     }).then(function(mapData){
         console.log(mapData)
+        
+        TrackAudio = new Audio('../song-audio/'+mapData.General.AudioFilename)
+        TrackAudio.volume = .5
         var TimingPoints = []
         for (var TP of mapData.TimingPoints){
             if (TP.Type == "TimingPoint"){
@@ -144,19 +147,27 @@ window.onload = function(){
                 MissSoundEffect.play()
             }   
         }
-
+        var checkCount = 0
+        var totalUR = 0
+        var UR = 0
         function checkHit(column){
+            let accOffset = 0;
             let TrueNoteOffset = (trackNotes[column][0].offset-hitLineHeightOffset)/SpeedFactor
             let currentTime = (TrackAudio.currentTime*1000)
-            let percision = (TrueNoteOffset-globalOffset-60+currentTime)
+            let percision = (TrueNoteOffset+currentTime)
             if (Math.abs(percision)<350){
+                checkCount++;
+                totalUR+=percision;
+                UR=totalUR/checkCount;
+                console.log(UR)
                 trackNotes[column].shift()
                 noteHit(percision)
             }
         }
 
         function playHitsound(){
-            HitNormal.play()
+            let sound = new Audio('../hit-sounds/hitnormal.wav')
+            sound.play();
         }
 
         function KeyboardEvent(ev){     
@@ -168,6 +179,7 @@ window.onload = function(){
                 checkHit(keybinds.indexOf(key))
             }
         }
+
         function KeyboardupEvent(ev){
             var key = ev.code;
             if (keybinds.includes(key)){
@@ -179,8 +191,8 @@ window.onload = function(){
         var main = () => {
             var note = new Image()
             var line = new Image()
-            note.src = "skin/note.png";
-            line.src = "skin/note.png";
+            note.src = "../skin/note.png";
+            line.src = "../skin/note.png";
             pY = 0;
             function drawNotes(){
                 function checkMiss(){
@@ -200,47 +212,14 @@ window.onload = function(){
                     return (parseInt($ph(5))+(pY+value.offset)>0)
                 }
                 checkMiss()
+
                 for (var index = 0; index<4;index++){
                     for (var noteObj of trackNotes[index].filter(notefilter)){
                         ctx.drawImage(note,gameBgPosLeft+track.BorderWidth+track.keyWidth*index,noteObj.offset+pY,parseInt(track.keyWidth),parseInt($ph(5)));
                     }
                 }
-                /*\
-                for (var index = 0; index<4;index++){
-                    for (var noteObj of trackNotes[index]){  
-                        //below canvas         
-                        //if (noteObj.Type == 'Hit'){
-                            if (noteObj.offset+pY>canvas.height){
-                                trackNotes[index].shift();
-                                updateScore($('miss'));
-                                $('combo').innerText = '0'
-                                MissSoundEffect.play()
-                                continue;
-                            }
-                            //above canvas
-                            if (parseInt($ph(5))+(pY+noteObj.offset)<0){
-                                break;
-                            }
-                            ctx.drawImage(note,gameBgPosLeft+track.BorderWidth+track.keyWidth*index,noteObj.offset+pY,parseInt(track.keyWidth),parseInt($ph(5)));
-                            /*\ going to hold of from holds for now
-                        } if (noteObj.Type == 'Hold'){
-                            
-                            if (noteObj.EndTime+pY>canvas.height){
-                                trackNotes[index].shift();
-                                updateScore($('miss'));
-                                $('combo').innerText = '0'
-                                MissSoundEffect.play()
-                                continue;
-                            }
-                            //above canvas
-                            if (parseInt($ph(30))+(pY+noteObj.offset)<0){
-                                break;
-                            }
-                            ctx.drawImage(note,gameBgPosLeft+track.BorderWidth+track.keyWidth*index,noteObj.offset+(Math.abs(noteObj.offset-noteObj.EndTime))+pY,parseInt(track.keyWidth),parseInt($ph(30)));
-                        }   
-                    }
-                }\*/
             }
+
             function animate(){
                 drawGame()
                 //keys
