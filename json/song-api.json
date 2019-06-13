@@ -1,0 +1,34 @@
+[
+    {"Title":"Veritas",
+    "Audio":"veritas1.mp3",
+    "Image":"veritas1.jpg",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"196","link":"https://api.myjson.com/bins/c27c5"},
+        {"Name":"[HD]","Difficulty":"316","link":"https://api.myjson.com/bins/14msnp"},
+        {"Name":"[MX]","Difficulty":"413","link":"https://api.myjson.com/bins/1d524d"}]},
+
+    {"Title":"Tomorrow Perfume (tpz Despair Remix)",
+    "Audio":"Tomorrow-Perfume2.mp3",
+    "Image":"Tomorrow-Perfume2.jpg",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"193","link":"https://api.myjson.com/bins/15znx1"},
+        {"Name":"[HD]","Difficulty":"308","link":"https://api.myjson.com/bins/b916l"},
+        {"Name":"[EX]","Difficulty":"421","link":"https://api.myjson.com/bins/jfjt1"}]},
+
+    {"Title":"HAELEQUIN",
+    "Audio":"haelequin3.mp3",
+    "Image":"haelequin3.jpg",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"197","link":"https://api.myjson.com/bins/15laxx"},
+        {"Name":"[HD]","Difficulty":"228","link":"https://api.myjson.com/bins/kkpad"},
+        {"Name":"[EX]","Difficulty":"383","link":"https://api.myjson.com/bins/ae6ud"},
+        {"Name":"[INF]","Difficulty":"544","link":"https://api.myjson.com/bins/1evnz9"}]},
+        
+    {"Title":"Yeah Boy - Shooting Stars",
+    "Audio":"Yeah Boy - Shooting Stars4.mp3",
+    "Image":"Yeah Boy - Shooting Stars4.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"107","link":"https://api.myjson.com/bins/pgo5x"},
+        {"Name":"[NM]","Difficulty":"147","link":"https://api.myjson.com/bins/yzlud"},
+        {"Name":"[HD]","Difficulty":"233","link":"https://api.myjson.com/bins/k5wvp"}]}
+]

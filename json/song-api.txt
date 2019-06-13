@@ -1,12 +1,16 @@
 1)Veritas - presti 
 audio: veritas1.mp3
-links: veritas1.jpg
+image: veritas1.jpg
+
+links: 
 Vespere [MX] - 413: 	https://api.myjson.com/bins/1d524d
 Vidi [HD] - 316: 	https://api.myjson.com/bins/14msnp
 Veni [NM] - 196:	https://api.myjson.com/bins/c27c5
 
 2)Tomorrow Perfume (tpz Despair Remix) 
 audio: Tomorrow-Perfume2.mp3
+image: Tomorrow-Perfume2.jpg
+
 links:
 [NOVICE Lv.4] - 193: 	https://api.myjson.com/bins/15znx1
 [ADVANCED Lv.9] - 308: 	https://api.myjson.com/bins/b916l
@@ -14,11 +18,13 @@ links:
 
 3) HAELEQUIN - orangentle / Yu_Asahina
 audio: haelequin3.mp3
+image: haelequin3.jpg
+
 links:
-[INF] - 197:	https://api.myjson.com/bins/1evnz9
-[EXH] - 228:	https://api.myjson.com/bins/ae6ud
-[ADV] - 383:	https://api.myjson.com/bins/kkpad
-[NOV] - 544:	https://api.myjson.com/bins/15laxx
+[INF] - 544:	https://api.myjson.com/bins/1evnz9
+[EXH] - 383:	https://api.myjson.com/bins/ae6ud
+[ADV] - 228:	https://api.myjson.com/bins/kkpad
+[NOV] - 197:	https://api.myjson.com/bins/15laxx
 
 4) Yeah Boy - Shooting Stars - BaconAkin
 audio: Yeah Boy - Shooting Stars4.mp3
