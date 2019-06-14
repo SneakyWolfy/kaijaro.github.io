@@ -141,8 +141,8 @@ function load(){
 
             $('difBoxContainer').innerHTML += "<button id=\"dif"+difNum+"\" class=\"dif "+DifColor+"\" onclick=\"selectDif("+difNum+")\"><p>"+SongData[songIndex].Versions[difNum].Name+"</p></button>";
         }
-        loadaudio("song-audio/"+audioName,audioPreview)
-        loadBG("song-bg/"+image)
+        loadaudio("https://kaijaro.github.io/song-audio/"+audioName,audioPreview)
+        loadBG("https://kaijaro.github.io/song-bg/"+image)
     })
 }
 
