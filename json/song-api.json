@@ -5,11 +5,11 @@
     "Versions":[
         {"Name":"[NM]","Difficulty":"196","link":"https://api.myjson.com/bins/c27c5"},
         {"Name":"[HD]","Difficulty":"316","link":"https://api.myjson.com/bins/14msnp"},
-        {"Name":"[MX]","Difficulty":"413","link":"https://api.myjson.com/bins/1d524d"}]},
+        {"Name":"[EX]","Difficulty":"413","link":"https://api.myjson.com/bins/1d524d"}]},
 
     {"Title":"Tomorrow Perfume (tpz Despair Remix)",
     "Audio":"Tomorrow-Perfume2.mp3",
-    "Image":"Tomorrow-Perfume2.jpg",
+    "Image":"Tomorrow-Perfume2.png",
     "Versions":[
         {"Name":"[NM]","Difficulty":"193","link":"https://api.myjson.com/bins/15znx1"},
         {"Name":"[HD]","Difficulty":"308","link":"https://api.myjson.com/bins/b916l"},
@@ -26,7 +26,7 @@
         
     {"Title":"Yeah Boy - Shooting Stars",
     "Audio":"Yeah Boy - Shooting Stars4.mp3",
-    "Image":"Yeah Boy - Shooting Stars4.jpg",
+    "Image":"YeahBoy-ShootingStars4.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"107","link":"https://api.myjson.com/bins/pgo5x"},
         {"Name":"[NM]","Difficulty":"147","link":"https://api.myjson.com/bins/yzlud"},

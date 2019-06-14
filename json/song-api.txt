@@ -9,7 +9,7 @@ Veni [NM] - 196:	https://api.myjson.com/bins/c27c5
 
 2)Tomorrow Perfume (tpz Despair Remix) 
 audio: Tomorrow-Perfume2.mp3
-image: Tomorrow-Perfume2.jpg
+image: Tomorrow-Perfume2.png
 
 links:
 [NOVICE Lv.4] - 193: 	https://api.myjson.com/bins/15znx1

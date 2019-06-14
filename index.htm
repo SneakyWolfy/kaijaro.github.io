@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="styles/menu-style.css">
-    <script src="code/menu-code.js"></script>
+    <script src="code/menu-code.js" defer></script>
 </head>
     <body>
         <header id='Title' class="screen1">
@@ -14,33 +14,39 @@
         </header>
 
         <main class="screen1" id="main-options-list">
-            <button class="screen1 main-button" id="play-button" onclick="window.aniPlayBtn()">
+            <button class="screen1 main-button hoverinverse" id="play-button" onclick="window.aniPlayBtn()">
                 Play
             </button>
-            <button class="screen1 main-button" id="option-button" onclick="">
+            <button class="screen1 main-button hoverinverse" id="option-button" onclick="">
                 Options
             </button>
         </main>
 
         <main id="screen2" class="screen2">
+            <div id="imageBox" class="imageStyle"></div>
+            <div id="imageFade" class="imageFade"></div>
             
-            <div id="song-container">
-                <div id="song-overflow">
-                    <button id='Song1' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
-                        Veritas - presti
-                    </button>
-                    <button id='Song2' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
-                        Tomorrow Perfume (tpz Despair Remix)
-                    </button>
-                    <button id='Song3' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
-                        HAELEQUIN - orangentle / Yu_Asahina
-                    </button>
-                    <button id='Song4' class='song screen2' onclick="StartGame('wdwdw','wdwd')">
-                        Yeah Boy - Shooting Stars - BaconAkin
-                    </button>
+            <div id="songInfoContainer">
+                <ul id="InfoList">
+                    <li id="title"> a very long title name - a very long artist name</li>
+                    <li id="creator">Created by [creator]</li>
+                </ul>
+            </div>
+            <div id="difBox">
+                
+                <div id="difBoxContainer">
+                    <button id="dif0" class="dif screen2 hoverinverse"><p>wdwd</p></button>
+                    <button id="dif1" class="dif screen2 hoverinverse"><p>wdwd</p></button>
+                    <button id="dif3" class="dif screen2 hoverinverse"><p>wdwd</p></button>
+                </div>
+                <div id="playDifContainer">
                 </div>
             </div>
 
+            <div id="song-container" class="screen2">
+                <div id="song-overflow" class="screen2">
+                </div>
+            </div>
         </main>
 
         <script>
