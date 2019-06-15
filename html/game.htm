@@ -5,10 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Game</title>
         <link rel="stylesheet" href="../styles/game-style.css">
-        <script src="../code/game-code.js"></script>
+        <script src="../code/game-code.js" defer></script>
     </head>
 
     <body>
+        <ul id="keyDisplay">
+            <li id="0"></li>
+            <li id="1"></li>
+            <li id="2"></li>
+            <li id="3"></li>
+        </ul>
+        <div id="instruct">
+            Loading...
+        </div>
         <canvas id="game"></canvas>
         <ul id='score'>
             <li>Perfect</li>
@@ -16,13 +25,14 @@
             <li>Okay</li>
             <li>Bad</li>
             <li>Miss</li>
-            <li>Combo</li>
+            <li>Streak</li>
             <li id='perfect'>0</li>
             <li id='good'>0</li>
             <li id='ok'>0</li>
             <li id='bad'>0</li>
             <li id='miss'>0</li>
-            <li id='combo'>0</li>
+            <li id='streak'>0</li>
         </ul>
+        
     </body>
 </html>
