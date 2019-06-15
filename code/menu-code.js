@@ -1,4 +1,5 @@
 //load events
+"use strict";
 
 var debounceAni = true;
 var $ = (id) => {
@@ -30,6 +31,7 @@ init()
 //Screen 1 transitions
 
 function aniPlayBtn(){
+    
     if (debounceAni){
         function AnimationPopOutEnd(){
             $('play-button').classList.remove('popAni');
@@ -50,9 +52,11 @@ function aniPlayBtn(){
         }
 
         debounceAni = false;
+
+        
         $('play-button').classList.add("popAni");
         const popAnimatied = document.querySelector('#play-button')
-        popAnimatied.addEventListener('animationend',AnimationPopOutEnd)
+        $('play-button').addEventListener('animationend',AnimationPopOutEnd)
             
         $('Title').classList.add("fadeOutAni");
         $('option-button').classList.add("fadeOutAni");
@@ -76,7 +80,7 @@ function aniLoadSongs() {
             console.log("c")
             songLoadAnimatied.removeEventListener('animationend',AnimationFadeInEnd)
         }
-        for (element of document.getElementsByClassName('screen2')){
+        for (var element of document.getElementsByClassName('screen2')){
             element.classList.add("fadeInAni");
             element.style.display = 'block';
         }
@@ -122,7 +126,7 @@ function aniLoadOptions() {
     if (debounceAni){
         debounceAni = false;
         function AnimationFadeInEnd(){
-            for (element of document.getElementsByClassName('screen3')){
+            for (let element of document.getElementsByClassName('screen3')){
                 element.classList.remove("fadeInAni");
             }
             debounceAni = true;
@@ -130,7 +134,7 @@ function aniLoadOptions() {
             songLoadAnimatied.removeEventListener('animationend',AnimationFadeInEnd)
         }
 
-        for (element of document.getElementsByClassName('screen3')){
+        for (let element of document.getElementsByClassName('screen3')){
             element.classList.add("fadeInAni");
             element.style.display = 'block';
         }
@@ -210,6 +214,7 @@ function getVersionColor(versionName){
             return "";
     }
 }
+var image;
 function load(){
     let songIndex = parseInt(selectedSong.slice(4));
     let url = SongData[songIndex].Versions[0].link
@@ -320,43 +325,42 @@ function selectDif(id){
 
 //back
 $("back").onclick = () => {
-    if (debounceAni){
-        function unloadScreen(callback){
-            unload();
-            debounceAni = false;
-            function AnimationFadeOutEnd(){
-                for (element of document.getElementsByClassName('screen2')){
-                    element.classList.remove("fadeOutAni");
-                    element.style.display='none';
-                }
-                for (element of document.getElementsByClassName('screen3')){
-                    element.classList.remove("fadeOutAni");
-                    element.style.display='none';
-                }
-                fadeAnimatied.removeEventListener('animationend',AnimationFadeOutEnd)
-                console.log("1");
-                callback();
+    function unloadScreen(callback){
+        unload();
+        debounceAni = false;
+        function AnimationFadeOutEnd(){
+            for (let element of document.getElementsByClassName('screen2')){
+                element.classList.remove("fadeOutAni");
+                element.style.display='none';
             }
-            for (element of document.getElementsByClassName('screen2')){
-                element.classList.add("fadeOutAni");
+            for (let element of document.getElementsByClassName('screen3')){
+                element.classList.remove("fadeOutAni");
+                element.style.display='none';
             }
-            for (element of document.getElementsByClassName('screen3')){
-                element.classList.add("fadeOutAni");
-            }
-            const fadeAnimatied = document.querySelector('#back');
-            fadeAnimatied.addEventListener('animationend', AnimationFadeOutEnd);
+            fadeAnimatied.removeEventListener('animationend',AnimationFadeOutEnd)
+            console.log("1");
+            callback();
         }
+        for (let element of document.getElementsByClassName('screen2')){
+            element.classList.add("fadeOutAni");
+        }
+        for (let element of document.getElementsByClassName('screen3')){
+            element.classList.add("fadeOutAni");
+        }
+        const fadeAnimatied = document.querySelector('#back');
+        fadeAnimatied.addEventListener('animationend', AnimationFadeOutEnd);
     }
-    
-    unloadScreen(function(response){
-        loadMain()
-    })
+    if (debounceAni){
+        unloadScreen(function(response){
+            loadMain()
+        })
+    }
 }
 
 function loadMain(){
     function AnimationFadeInEnd () {
         console.log("3")
-        for (element of document.getElementsByClassName('screen1')){
+        for (let element of document.getElementsByClassName('screen1')){
             element.classList.remove("fadeInAni");
         }
         debounceAni = true;
@@ -365,7 +369,7 @@ function loadMain(){
 
     console.log("2");
 
-    for (element of document.getElementsByClassName('screen1')){
+    for (let element of document.getElementsByClassName('screen1')){
         element.classList.add("fadeInAni");
         element.style.display = 'block';
         console.log(element);
@@ -394,6 +398,11 @@ $("mute").onclick = () => {
             muted = true;
     }
 }
+
+//MENU BUTTON EVENTS (FOR CHROME)
+
+$("play-button").addEventListener("click",aniPlayBtn)
+
 
 
 

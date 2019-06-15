@@ -273,11 +273,55 @@ header p {
     background:aliceblue;
     color:rgb(17, 17, 17);
 }
+
 .popAni{
+    -webkit-animation-name: 'pop';
+    -webkit-animation-duration: .5s;
     animation-name: 'pop';
     animation-duration: .5s;
 }
-
+@-webkit-keyframes pop{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,0);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,-35.8px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
+@-o-keyframes pop{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,0);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,-35.8px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
+@-moz-keyframes pop{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,0);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,-35.8px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
 @keyframes pop{
     from {background-color: rgba(0, 0, 0, 0);
         color: rgba(0, 0, 0, 0);
@@ -294,10 +338,58 @@ header p {
 }
 
 .popButtonAni{
+    -webkit-animation-name: 'popButton';
+    -webkit-animation-duration: .5s;
+    -webkit-animation-name: 'popButton';
+    -webkit-animation-duration: .5s;
+    -webkit-animation-name: 'popButton';
+    -webkit-animation-duration: .5s;
     animation-name: 'popButton';
     animation-duration: .5s;
 }
 
+@-webkit-keyframes popButton{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,96px);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,60.2px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
+@-o-keyframes popButton{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,96px);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,60.2px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
+@-moz-keyframes popButton{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,96px);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,60.2px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
 @keyframes popButton{
     from {background-color: rgba(0, 0, 0, 0);
         color: rgba(0, 0, 0, 0);
@@ -313,12 +405,26 @@ header p {
         opacity: 0;}
 }
 
+
+
 .fadeOutAni{
+    -webkit-animation-name: 'fadeOut';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: 'fadeOut';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: 'fadeOut';
+    -webkit-animation-duration: 1s;
     animation-name: 'fadeOut';
     animation-duration: 1s;
 }
 
 .fadeInAni{
+    -webkit-animation-name: 'fadeIn';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: 'fadeIn';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: 'fadeIn';
+    -webkit-animation-duration: 1s;
     animation-name: 'fadeIn';
     animation-duration: 1s;
 }
@@ -407,9 +513,32 @@ header p {
     background:aliceblue;
     color:rgb(17, 17, 17)
 }
+
+@-webkit-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@-o-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@-moz-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 @keyframes fadeOut{
     from {opacity: 1;}
     to {opacity: 0;}
+}
+
+@-o-keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-moz-keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @keyframes fadeIn{
