@@ -32,7 +32,7 @@ window.onload = function(){
     }
 
     var trackNotes = [[],[],[],[]]
-    var songUrl = "https://api.myjson.com/bins/pgo5x"
+    var songUrl = sessionStorage.getItem("url")
     var track = {
         color:'#ffffff',
         RedPassive:'0',
@@ -122,7 +122,8 @@ window.onload = function(){
             updateTrack()
         }
         setUpKeyValues()
-        var keybinds = ["KeyA","KeyS","KeyD","KeyF"]
+        var keybinds = sessionStorage.getItem("keybinds").split(",");
+
         addEventListener("keydown",KeyboardEvent);
         addEventListener("keyup",KeyboardupEvent);
         

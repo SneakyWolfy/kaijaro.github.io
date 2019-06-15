@@ -37,7 +37,7 @@ function aniPlayBtn(){
             $('play-button').classList.remove('popAni');
             $('play-button').style.display = 'none';
             console.log("a")
-            popAnimatied.removeEventListener('animationend',AnimationPopOutEnd)
+            $('play-button').removeEventListener('animationend',AnimationPopOutEnd)
         }
         
         function AnimationFadeInEnd(){
@@ -55,7 +55,6 @@ function aniPlayBtn(){
 
         
         $('play-button').classList.add("popAni");
-        const popAnimatied = document.querySelector('#play-button')
         $('play-button').addEventListener('animationend',AnimationPopOutEnd)
             
         $('Title').classList.add("fadeOutAni");
@@ -291,7 +290,7 @@ var songurl
 var isDifSelected = false;
 
 function createButton(id){
-    $('playDifContainer').innerHTML = '<button id="playDifButton" class="hoverinverse">Play</button>'
+    $('playDifContainer').innerHTML = '<button id="playDifButton" class="hoverinverse playbutton" onclick="window.loadGame()">Play</button>'
     $('playDifButton').style.width = (SongData[parseInt(selectedSong.slice(4))].Versions.length*175)+"px";
     $('playDifButton').classList.add("solid"+getVersionColor((SongData[parseInt(selectedSong.slice(4))].Versions[id].Name)));
     console.log(getVersionColor((SongData[parseInt(selectedSong.slice(4))].Versions[id].Name)))
@@ -413,12 +412,12 @@ addEventListener("mousemove",(e) => {
     $("imageBox").style.backgroundPosition = amountMovedX + 'px ' + amountMovedY + 'px';
 })
 
-
-/*
-onmousemove = (function(e){
-    console.log(e,this);
-    var amountMovedX = (e.pageX * -1 / 6);
-    var amountMovedY = (e.pageY * -1 / 6);
-    this.css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-});
-*/
+function loadGame(){
+    if (debounceAni){
+        debounceAni=false;
+        sessionStorage.setItem("keybinds",["KeyA","KeyS","KeyD","KeyF"])
+        sessionStorage.setItem("url",songurl)
+        window.open("html/game.htm","_self")
+        debounceAni=true;
+    }
+}
