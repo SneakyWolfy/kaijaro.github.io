@@ -1,3 +1,5 @@
+//load events
+
 var debounceAni = true;
 var $ = (id) => {
     return document.getElementById(id);
@@ -25,31 +27,120 @@ function init() {
 
 init()
 
+//Screen 1 transitions
+
 function aniPlayBtn(){
     if (debounceAni){
-        debounceAni = false;
-        $('play-button').classList.add("popAni");
-        const popAnimatied = document.querySelector('#play-button')
-
-        popAnimatied.addEventListener('animationend', () => {
-            $('play-button').classList.remove('pop');
+        function AnimationPopOutEnd(){
+            $('play-button').classList.remove('popAni');
             $('play-button').style.display = 'none';
-        });
-
-        $('Title').classList.add("fadeOutAni");
-        $('option-button').classList.add("fadeOutAni");
-        const fadeAnimatied = document.querySelector('#option-button')
-        fadeAnimatied.addEventListener('animationend', () => {
+            console.log("a")
+            popAnimatied.removeEventListener('animationend',AnimationPopOutEnd)
+        }
+        
+        function AnimationFadeInEnd(){
             $('Title').classList.remove('fadeOutAni');
             $('Title').style.display = 'none';
             $('option-button').classList.remove('fadeOutAni');
             $('option-button').style.display = 'none';
             debounceAni = true;
+            console.log("b")
+            fadeAnimatied.removeEventListener('animationend',AnimationFadeInEnd)
             aniLoadSongs()
-        });
+        }
+
+        debounceAni = false;
+        $('play-button').classList.add("popAni");
+        const popAnimatied = document.querySelector('#play-button')
+        popAnimatied.addEventListener('animationend',AnimationPopOutEnd)
+            
+        $('Title').classList.add("fadeOutAni");
+        $('option-button').classList.add("fadeOutAni");
+        const fadeAnimatied = document.querySelector('#option-button')
+        fadeAnimatied.addEventListener('animationend', AnimationFadeInEnd)
     }
 }
 
+function aniLoadSongs() {
+    if (debounceAni){
+        debounceAni = false;
+        loadMaps(function(response){
+            select(0)
+            load();
+        })
+        function AnimationFadeInEnd(){
+            for (element of document.getElementsByClassName('screen2')){
+                element.classList.remove("fadeInAni");
+            }
+            debounceAni = true;
+            console.log("c")
+            songLoadAnimatied.removeEventListener('animationend',AnimationFadeInEnd)
+        }
+        for (element of document.getElementsByClassName('screen2')){
+            element.classList.add("fadeInAni");
+            element.style.display = 'block';
+        }
+        const songLoadAnimatied = document.querySelector('.screen2')
+        songLoadAnimatied.addEventListener('animationend',AnimationFadeInEnd)
+    }
+}
+
+function aniOptionBtn(){
+    if (debounceAni){
+        debounceAni = false;
+
+        function AnimationPopOutEnd(){
+            $('option-button').classList.remove('popButtonAni');
+            $('option-button').style.display = 'none';
+            console.log("d")
+            popAnimatied.removeEventListener('animationend',AnimationPopOutEnd)
+        }
+
+        function AnimationFadeInEnd(){
+            $('Title').classList.remove('fadeOutAni');
+            $('Title').style.display = 'none';
+            $('play-button').classList.remove('fadeOutAni');
+            $('play-button').style.display = 'none';
+            debounceAni = true;
+            console.log("e")
+            fadeAnimatied.removeEventListener('animationend',AnimationFadeInEnd)
+            aniLoadOptions()
+        }
+
+        $('option-button').classList.add("popButtonAni");
+        const popAnimatied = document.querySelector('#option-button')
+        popAnimatied.addEventListener('animationend', AnimationPopOutEnd)
+
+        $('Title').classList.add("fadeOutAni");
+        $('play-button').classList.add("fadeOutAni");
+        const fadeAnimatied = document.querySelector('#option-button')
+        fadeAnimatied.addEventListener('animationend', AnimationFadeInEnd)
+    }
+}
+
+function aniLoadOptions() {
+    if (debounceAni){
+        debounceAni = false;
+        function AnimationFadeInEnd(){
+            for (element of document.getElementsByClassName('screen3')){
+                element.classList.remove("fadeInAni");
+            }
+            debounceAni = true;
+            console.log("f")
+            songLoadAnimatied.removeEventListener('animationend',AnimationFadeInEnd)
+        }
+
+        for (element of document.getElementsByClassName('screen3')){
+            element.classList.add("fadeInAni");
+            element.style.display = 'block';
+        }
+
+        const songLoadAnimatied = document.querySelector('.screen3')
+        songLoadAnimatied.addEventListener('animationend',AnimationFadeInEnd);
+    }
+}
+
+//Screen 2 transitions
 function loadMaps(callback){
     $('song-overflow').innerHTML = "";
     for (var songNumber=0;songNumber<SongData.length;songNumber++){
@@ -66,6 +157,9 @@ function stopAudio(){
     previewAudio.pause();
 }
 
+function resumeAudio(){
+    previewAudio.play()
+}
 function loadaudio(file,preview){
     function getDuration(src, cb) {
         var audio = new Audio();
@@ -83,8 +177,10 @@ function loadaudio(file,preview){
         }
         previewAudio.currentTime = previewTime
         previewAudio.volume = .01;
-        previewAudio.play();
         previewAudio.loop = true;
+        if (!muted){
+            previewAudio.play();
+        }
     })
 }
 
@@ -146,7 +242,7 @@ function load(){
     })
 }
 
-var selectedSong;
+var selectedSong = "";
 var selectedDif = false;
 
 function select(id){
@@ -160,7 +256,10 @@ function unloadDif(){
 }
 
 function unload(){
-    $(selectedSong).classList.remove("selected");
+    if (!selectedSong==""){
+        $(selectedSong).classList.remove("selected");
+    }
+    
     selectedSong="";
     selectedDif = false;
 
@@ -219,27 +318,83 @@ function selectDif(id){
     createButton(id);
 }
 
-
-function aniLoadSongs() {
+//back
+$("back").onclick = () => {
     if (debounceAni){
-        debounceAni = false;
-        loadMaps(function(response){
-            select(0)
-            load();
-        })
-        for (element of document.getElementsByClassName('screen2')){
-            element.classList.add("fadeInAni");
-            element.style.display = 'block';
-        }
-        const songLoadAnimatied = document.querySelector('.screen2')
-        songLoadAnimatied.addEventListener('animationend',() =>{
-            for (element of document.getElementsByClassName('screen2')){
-                element.classList.remove("fadeInAni");
+        function unloadScreen(callback){
+            unload();
+            debounceAni = false;
+            function AnimationFadeOutEnd(){
+                for (element of document.getElementsByClassName('screen2')){
+                    element.classList.remove("fadeOutAni");
+                    element.style.display='none';
+                }
+                for (element of document.getElementsByClassName('screen3')){
+                    element.classList.remove("fadeOutAni");
+                    element.style.display='none';
+                }
+                fadeAnimatied.removeEventListener('animationend',AnimationFadeOutEnd)
+                console.log("1");
+                callback();
             }
-            debounceAni = true;
-        })
+            for (element of document.getElementsByClassName('screen2')){
+                element.classList.add("fadeOutAni");
+            }
+            for (element of document.getElementsByClassName('screen3')){
+                element.classList.add("fadeOutAni");
+            }
+            const fadeAnimatied = document.querySelector('#back');
+            fadeAnimatied.addEventListener('animationend', AnimationFadeOutEnd);
+        }
+    }
+    
+    unloadScreen(function(response){
+        loadMain()
+    })
+}
+
+function loadMain(){
+    function AnimationFadeInEnd () {
+        console.log("3")
+        for (element of document.getElementsByClassName('screen1')){
+            element.classList.remove("fadeInAni");
+        }
+        debounceAni = true;
+        menuLoadAnimatied.removeEventListener('animationend',AnimationFadeInEnd)
+    }
+
+    console.log("2");
+
+    for (element of document.getElementsByClassName('screen1')){
+        element.classList.add("fadeInAni");
+        element.style.display = 'block';
+        console.log(element);
+    }
+
+    const menuLoadAnimatied = document.querySelector('#Title');
+    console.log(menuLoadAnimatied);
+
+    menuLoadAnimatied.addEventListener('animationend',AnimationFadeInEnd)
+}
+
+//mute
+var muted = false
+$("mute").onclick = () => {
+    switch(muted){
+        case true:
+            resumeAudio()
+            $("on").style.display = "block";
+            $("off").style.display = "none";
+            muted = false;
+            break;
+        case false:
+            stopAudio();
+            $("on").style.display = "none";
+            $("off").style.display = "block";
+            muted = true;
     }
 }
+
 
 
 //Background movment
@@ -248,6 +403,8 @@ addEventListener("mousemove",(e) => {
     var amountMovedY = (e.pageY * -1 / 64);
     $("imageBox").style.backgroundPosition = amountMovedX + 'px ' + amountMovedY + 'px';
 })
+
+
 /*
 onmousemove = (function(e){
     console.log(e,this);

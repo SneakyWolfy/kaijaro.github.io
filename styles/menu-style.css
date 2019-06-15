@@ -88,7 +88,8 @@ body {
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
-    filter: blur(8px) brightness(.5);
+    filter: blur(10px);
+    opacity: .5;
 }
 
 #imageFade{
@@ -229,6 +230,49 @@ header p {
     text-align: right;
 }
 
+#back{
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    height: 80px;
+    width: 200px;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    font-size: 5vh;
+    background: rgba(17, 17, 17,.2);
+    transition: background .4s, color .4s; 
+}
+#back:hover{
+    background:aliceblue;
+    color:rgb(17, 17, 17);
+}
+
+#mute{
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    height: 80px;
+    width: 80px;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    font-size: 5vh;
+    background: rgba(17, 17, 17,.2);
+    transition: background .4s, color .4s; 
+}
+
+.mutologo{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#off{
+    display: none;
+}
+#mute:hover{
+    background:aliceblue;
+    color:rgb(17, 17, 17);
+}
 .popAni{
     animation-name: 'pop';
     animation-duration: .5s;
@@ -243,6 +287,26 @@ header p {
         opacity: 1;}
     to {background-color: rgba(0, 0, 0, 0);
         transform: translate(-300px,-35.8px);;
+        color: rgba(0, 0, 0, 0);
+        width: 600px;
+        height: 143.2px;
+        opacity: 0;}
+}
+
+.popButtonAni{
+    animation-name: 'popButton';
+    animation-duration: .5s;
+}
+
+@keyframes popButton{
+    from {background-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+        transform: translate(-150px,96px);
+        width: 300px;
+        height: 71.6px;
+        opacity: 1;}
+    to {background-color: rgba(0, 0, 0, 0);
+        transform: translate(-300px,60.2px);;
         color: rgba(0, 0, 0, 0);
         width: 600px;
         height: 143.2px;
@@ -350,5 +414,5 @@ header p {
 
 @keyframes fadeIn{
     from {opacity: 0;}
-    to {opacity: .8;}
+    to {opacity: 1;}
 }

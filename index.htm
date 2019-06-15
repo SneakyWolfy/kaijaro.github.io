@@ -17,7 +17,7 @@
             <button class="screen1 main-button hoverinverse" id="play-button" onclick="window.aniPlayBtn()">
                 Play
             </button>
-            <button class="screen1 main-button hoverinverse" id="option-button" onclick="">
+            <button class="screen1 main-button hoverinverse" id="option-button" onclick="window.aniOptionBtn()">
                 Options
             </button>
         </main>
@@ -33,21 +33,32 @@
                 </ul>
             </div>
             <div id="difBox">
-                
                 <div id="difBoxContainer">
                     <button id="dif0" class="dif screen2 hoverinverse"><p>wdwd</p></button>
                     <button id="dif1" class="dif screen2 hoverinverse"><p>wdwd</p></button>
                     <button id="dif3" class="dif screen2 hoverinverse"><p>wdwd</p></button>
                 </div>
                 <div id="playDifContainer">
+                    
                 </div>
             </div>
 
-            <div id="song-container" class="screen2">
-                <div id="song-overflow" class="screen2">
+            <div id="song-container" class="">
+                <div id="song-overflow" class="">
                 </div>
             </div>
         </main>
+
+
+        <button id="back" class="screen2 screen3">
+            Back
+        </button>
+
+        <button id="mute" class="">
+            <img id="off" class="mutologo" src="https://learnwebsitedesign.com/svg-icons/svg-music-play-button-icon-2/svg-music-play-button-icon-2.svg" alt="Muted">
+            <img id="on" class="mutologo" src="https://learnwebsitedesign.com/svg-icons/svg-pause-button-icon-2/svg-pause-button-icon-2.svg" alt="Muted">
+        </button>
+
 
         <script>
             function StartGame(url,name){
