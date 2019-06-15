@@ -95,7 +95,7 @@ function unloadBg(){
 
 function loadBG(image){
     $("imageBox").style.backgroundImage = "url("+image+")";
-    $("InfoList").style.backgroundImage = "url("+image+")";
+    $("songInfoContainer").style.backgroundImage = "url("+image+")";
 }
 
 function getVersionColor(versionName){
