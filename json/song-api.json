@@ -8,14 +8,14 @@
 
     {"Title":"the high class audio",
     "Audio":"bill wurtz - the high class audio.mp3",
-    "Image":"bill wurtz - the high class audio.jpg",
+    "Image":"bill-wurtz-the-high-class-audio.png",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"101","link":"https://api.myjson.com/bins/fkcdx"},
         {"Name":"[NM]","Difficulty":"160","link":"https://api.myjson.com/bins/snvp1"}]},
 
     {"Title":"BLACK or WHITE",
     "Audio":"BlackYooh vs. siromaru - BLACK or WHITE.mp3",
-    "Image":"BlackYooh vs. siromaru - BLACK or WHITE.jpg",
+    "Image":"BLACK-or-WHITE.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"154","link":"https://api.myjson.com/bins/18bkwl"},
         {"Name":"[NM]","Difficulty":"210","link":"https://api.myjson.com/bins/1fgs5x"},
@@ -25,14 +25,14 @@
 
     {"Title":"Pulsar",
     "Audio":"Celldweller - Pulsar.mp3",
-    "Image":"Celldweller - Pulsar.jpg",
+    "Image":"Pulsar.png",
     "Versions":[
         {"Name":"[NM]","Difficulty":"158","link":"https://api.myjson.com/bins/8sn8l"},
         {"Name":"[HD]","Difficulty":"264","link":"https://api.myjson.com/bins/fxuhx"}]},
 
     {"Title":"Orange File",
     "Audio":"Deadmau5 - Orange File.mp3",
-    "Image":"Deadmau5 - Orange File.jpg",
+    "Image":"Orange-File.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"156","link":"https://api.myjson.com/bins/76ch1"},
         {"Name":"[NM]","Difficulty":"234","link":"https://api.myjson.com/bins/129691"},
@@ -40,7 +40,7 @@
 
     {"Title":"Flashes",
     "Audio":"Dollscythe - Flashes.mp3",
-    "Image":"Dollscythe - Flashes.jpg",
+    "Image":"Flashes.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"104","link":"https://api.myjson.com/bins/ndc4l"},
         {"Name":"[NM]","Difficulty":"208","link":"https://api.myjson.com/bins/tz8xx"},
@@ -49,7 +49,7 @@
 
     {"Title":"Igorrr & Ruby My Dear",
     "Audio":"Figue Folle - Igorrr & Ruby My Dear.mp3",
-    "Image":"Figue Folle - Igorrr & Ruby My Dear.jpg",
+    "Image":"Figue-Folle.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"152","link":"https://api.myjson.com/bins/ln6h1"},
         {"Name":"[NM]","Difficulty":"199","link":"https://api.myjson.com/bins/mu1ol"},
@@ -60,14 +60,14 @@
 
     {"Title":"Flower Dance",
     "Audio":"Flower Dance.mp3",
-    "Image":"Flower Dance.jpg",
+    "Image":"Flower-Dance.png",
     "Versions":[
         {"Name":"[NM]","Difficulty":"158","link":"https://api.myjson.com/bins/15cmlh"},
         {"Name":"[HD]","Difficulty":"250","link":"https://api.myjson.com/bins/e0txh"}]},
 
     {"Title":"Getty vs. DJ DiA - DropZ-Line",
     "Audio":"Getty vs. DJ DiA - DropZ-Line.mp3",
-    "Image":"Getty vs. DJ DiA - DropZ-Line.jpg",
+    "Image":"DropZ-Line.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"147","link":"https://api.myjson.com/bins/16da1h"},
         {"Name":"[NM]","Difficulty":"218","link":"https://api.myjson.com/bins/dsh05"},
@@ -77,7 +77,7 @@
 
     {"Title":"Getty vs. DJ DiA - Fox4-Raize",
     "Audio":"Getty vs. DJ DiA - Fox4-Raize.mp3",
-    "Image":"Getty vs. DJ DiA - Fox4-Raize.jpg",
+    "Image":"Fox4-Raize.png",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"142","link":"https://api.myjson.com/bins/w4mfp"},
         {"Name":"[NM]","Difficulty":"221","link":"https://api.myjson.com/bins/a8339"},
@@ -95,7 +95,7 @@
 
     {"Title":"Animals",
     "Audio":"Martin Garrix - Animals.mp3",
-    "Image":"Martin Garrix - Animals.jpg",
+    "Image":"Animals.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"114","link":"https://api.myjson.com/bins/i7alh"},
         {"Name":"[NM]","Difficulty":"172","link":"https://api.myjson.com/bins/cue5h"},
@@ -114,8 +114,8 @@
         {"Name":"[INF]","Difficulty":"450","link":"https://api.myjson.com/bins/vcz2d"}]},
 
     {"Title":"A Match Into Water",
-    "Audio":"Pierce The Veil - A Match Into Water.mp3",
-    "Image":"Pierce The Veil - A Match Into Water.jpg",
+    "Audio":"03 Pierce The Veil - A Match Into Water.mp3",
+    "Image":"A-Match-Into-Water.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"149","link":"https://api.myjson.com/bins/an37p"},
         {"Name":"[NM]","Difficulty":"221","link":"https://api.myjson.com/bins/n56x1"},
@@ -133,7 +133,7 @@
 
     {"Title":"Hours ft. Lady Leshurr & Paigey Cakey",
     "Audio":"SON OF KICK - Hours ft. Lady Leshurr & Paigey Cakey.mp3",
-    "Image":"SON OF KICK - Hours ft. Lady Leshurr & Paigey Cakey.jpg",
+    "Image":"Hours.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"176","link":"https://api.myjson.com/bins/1fuhzp"},
         {"Name":"[NM]","Difficulty":"283","link":"https://api.myjson.com/bins/10fdf9"},
@@ -141,7 +141,7 @@
 
     {"Title":"Let Me Hit It",
     "Audio":"Sporty-O - Let Me Hit It.mp3",
-    "Image":"Sporty-O - Let Me Hit It.jpg",
+    "Image":"Let-Me-Hit-It.png",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"156","link":"https://api.myjson.com/bins/qwfqt"},
         {"Name":"[NM]","Difficulty":"230","link":"https://api.myjson.com/bins/112y6t"},
@@ -149,14 +149,14 @@
 
     {"Title":"Boogie Woogie Splatter Show",
     "Audio":"t+pazolite - Boogie Woogie Splatter Show.mp3",
-    "Image":"t+pazolite - Boogie Woogie Splatter Show.jpg",
+    "Image":"Boogie-Woogie-Splatter-Show.png",
     "Versions":[
         {"Name":"[EX]","Difficulty":"400","link":"https://api.myjson.com/bins/18tl1x"},
         {"Name":"[SHD]","Difficulty":"639","link":"https://api.myjson.com/bins/c4vxx"}]},
 
     {"Title":"This Will Be the Day (James Landino Remix)",
     "Audio":"This Will Be the Day (James Landino Remix).mp3",
-    "Image":"This Will Be the Day (James Landino Remix).jpg",
+    "Image":"This-Will-Be-the-Day.png",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"118","link":"https://api.myjson.com/bins/h4pph"},
         {"Name":"[NM]","Difficulty":"208","link":"https://api.myjson.com/bins/brt9h"},
@@ -165,7 +165,7 @@
 
     {"Title":"Spider Dance (MARETU Remix)",
     "Audio":"Toby Fox - Spider Dance (MARETU Remix).mp3",
-    "Image":"Toby Fox - Spider Dance (MARETU Remix).jpg",
+    "Image":"Spider-Dance.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"136","link":"https://api.myjson.com/bins/16hzsl"},
         {"Name":"[NM]","Difficulty":"204","link":"https://api.myjson.com/bins/dx6r9"},
@@ -183,7 +183,7 @@
 
     {"Title":"Batting Show Perfect Version",
     "Audio":"TSUNKU - Batting Show Perfect Version.mp3",
-    "Image":"TSUNKU - Batting Show Perfect Version.jpg",
+    "Image":"Batting-Show-Perfect-Version.jpg",
     "Versions":[
         {"Name":"[EZ]","Difficulty":"140","link":"https://api.myjson.com/bins/paket"},
         {"Name":"[NM]","Difficulty":"221","link":"https://api.myjson.com/bins/pw00l"},
@@ -204,22 +204,21 @@
         {"Name":"[EZ]","Difficulty":"107","link":"https://api.myjson.com/bins/pgo5x"},
         {"Name":"[NM]","Difficulty":"147","link":"https://api.myjson.com/bins/yzlud"},
         {"Name":"[HD]","Difficulty":"233","link":"https://api.myjson.com/bins/k5wvp"}]},
-
-    {"Title":"Yotogibanashi no Kamikakushi",
-    "Audio":"Yotogibanashi no Kamikakushi.mp3",
-    "Image":"Yotogibanashi no Kamikakushi.jpg",
-    "Versions":[
-        {"Name":"[HD]","Difficulty":"329","link":"https://api.myjson.com/bins/19jaz9"},
-        {"Name":"[EX]","Difficulty":"376","link":"https://api.myjson.com/bins/146ej9"},
-        {"Name":"[INF]","Difficulty":"537","link":"https://api.myjson.com/bins/14ru51"}]},
-
     {"Title":"AiAe",
     "Audio":"Yuyoyuppe - AiAe.mp3",
-    "Image":"Yuyoyuppe - AiAe.jpg",
+    "Image":"AiAe.png",
     "Versions":[
         {"Name":"[NM]","Difficulty":"175","link":"https://api.myjson.com/bins/83511"},
         {"Name":"[HD]","Difficulty":"284","link":"https://api.myjson.com/bins/9a08l"},
         {"Name":"[EX]","Difficulty":"438","link":"https://api.myjson.com/bins/yvn91"},
         {"Name":"[INF]","Difficulty":"463","link":"https://api.myjson.com/bins/iv32t"},
-        {"Name":"[SHD]","Difficulty":"677","link":"https://api.myjson.com/bins/jgiol"}]}
+        {"Name":"[SHD]","Difficulty":"677","link":"https://api.myjson.com/bins/jgiol"}]},
+
+    {"Title":"Yotogibanashi no Kamikakushi",
+    "Audio":"Yotogibanashi no Kamikakushi.mp3",
+    "Image":"Yotogibanashi-no-Kamikakushi.jpg",
+    "Versions":[
+        {"Name":"[HD]","Difficulty":"329","link":"https://api.myjson.com/bins/19jaz9"},
+        {"Name":"[EX]","Difficulty":"376","link":"https://api.myjson.com/bins/146ej9"},
+        {"Name":"[INF]","Difficulty":"537","link":"https://api.myjson.com/bins/14ru51"}]}
 ]
