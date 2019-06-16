@@ -10,7 +10,7 @@ var SongData;
 function loadJSON(callback) {   
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'https://kaijaro.github.io/json/song-api.json', true); 
+    xobj.open('GET', 'json/song-api.json', true); 
     xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == "200") {
         callback(xobj.responseText);
@@ -192,9 +192,18 @@ function unloadBg(){
     $("InfoList").style.backgroundImage = "none"
 }
 
-function loadBG(image){
+function loadBG(image,callback){
+    /*
+    $("imageBox").style.backgroundImage = 'url("song-bg/A-Strange-Reunion-(Party-Crab-remix)-5.jpg")';
+    $("songInfoContainer").style.backgroundImage = 'url("https://kaijaro.github.io/song-bg/A-Strange-Reunion-(Party-Crab-remix)-5.jpg")';
+    */
+   /*
+    $("imageBox").style.backgroundImage = new URL(image);
+    $("songInfoContainer").style.backgroundImage = "url("+image+")";
+    */
     $("imageBox").style.backgroundImage = "url("+image+")";
     $("songInfoContainer").style.backgroundImage = "url("+image+")";
+    callback()
 }
 
 function getVersionColor(versionName){
@@ -215,6 +224,7 @@ function getVersionColor(versionName){
 }
 var image;
 function load(){
+
     let songIndex = parseInt(selectedSong.slice(4));
     let url = SongData[songIndex].Versions[0].link
     let audioName;
@@ -228,6 +238,7 @@ function load(){
         audioPreview = parseInt(file.General.PreviewTime);
         audioName = file.General.AudioFilename;
         image = SongData[songIndex].Image;
+        console.log(image)
         $("title").innerText=file.Metadata.Title + " - " + file.Metadata.Artist;
         $("creator").innerText="Created by " + file.Metadata.Creator;
         
@@ -242,7 +253,11 @@ function load(){
             $('difBoxContainer').innerHTML += "<button id=\"dif"+difNum+"\" class=\"dif "+DifColor+"\" onclick=\"selectDif("+difNum+")\"><p>"+SongData[songIndex].Versions[difNum].Name+"</p></button>";
         }
         loadaudio("https://kaijaro.github.io/song-audio/"+audioName,audioPreview)
-        loadBG("https://kaijaro.github.io/song-bg/"+image)
+        loadBG("song-bg/"+image,function(response){
+            console.log($("imageBox").style.backgroundImage)
+            console.log("song-bg/"+image)
+            console.log("url("+"song-bg/"+image+")")
+        })
     })
 }
 

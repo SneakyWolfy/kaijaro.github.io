@@ -55,6 +55,69 @@ body {
     display:none;
 }
 
+.screen3 {
+    display:none;
+}
+
+#option-display{
+    width: 100%;
+    height:200px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    color:aliceblue;
+    font-size: 7vh;
+    border-bottom: aliceblue 2px solid;
+    margin: 0;
+    padding: 0;
+}
+
+
+#option-contents{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    color:aliceblue;
+}
+#option-contents li{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    color:aliceblue;
+}
+
+#ck-button-container{
+    height: 100%;
+    width:  50%;
+    float: left;
+}
+
+#ck-button{
+    position: relative;
+    float: right;
+    margin: 10px;
+    height: 80px;
+    width: 200px;
+    border: 2px solid aliceblue;
+    font-size: 2vh;
+}
+
+#keybind-display{
+    float: left;
+    height: 100%;
+    width: 50%;
+    margin:none;
+}
+.ck-show{
+    width: 60px;
+    height: 60px;
+    margin: 20px 10px;
+    background-color: green;
+    float: left;
+}
+
 #song-container{
     overflow: hidden;
     position: absolute;
@@ -102,7 +165,6 @@ body {
 
 .imageFade{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .6),rgba(0, 0, 0, .3),rgba(0, 0, 0, .8), rgba(0, 0, 0, 1));
-
 }
 
 #difBox{
@@ -268,6 +330,7 @@ header p {
 #off{
     display: none;
 }
+
 #mute:hover{
     background:aliceblue;
     color:rgb(17, 17, 17);
@@ -430,7 +493,8 @@ header p {
 
 .hoverinverse{
     transition: background .4s, color .4s; 
-    color:aliceblue
+    color:aliceblue;
+    background: rgb(17, 17, 17);
 }
 
 .hoverinverse:hover{

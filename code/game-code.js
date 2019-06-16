@@ -201,7 +201,6 @@ fetch(songUrl).then(function(response){
     }
 
     function playHitsound(obj){
-        console.log(obj)
         let soundList = []
         for (var sound of obj.samples){
             sound = new Audio('../hit-sounds/hit'+sound+'.wav')
