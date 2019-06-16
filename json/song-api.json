@@ -1,19 +1,88 @@
 [
-    {"Title":"Veritas",
-    "Audio":"veritas1.mp3",
-    "Image":"veritas1.jpg",
+    {"Title":"A Strange Reunion (Party Crab remix)",
+    "Audio":"A-Strange-Reunion-(Party-Crab-remix)-5.mp3",
+    "Image":"A-Strange-Reunion-Party-Crab-remix-5.jpg",
     "Versions":[
-        {"Name":"[NM]","Difficulty":"196","link":"https://api.myjson.com/bins/c27c5"},
-        {"Name":"[HD]","Difficulty":"316","link":"https://api.myjson.com/bins/14msnp"},
-        {"Name":"[EX]","Difficulty":"413","link":"https://api.myjson.com/bins/1d524d"}]},
+        {"Name":"[EZ]","Difficulty":"174","link":"https://api.myjson.com/bins/dm7p1"},
+        {"Name":"[HD]","Difficulty":"260","link":"https://api.myjson.com/bins/15ll4l"}]},
 
-    {"Title":"Tomorrow Perfume (tpz Despair Remix)",
-    "Audio":"Tomorrow-Perfume2.mp3",
-    "Image":"Tomorrow-Perfume2.png",
+    {"Title":"the high class audio",
+    "Audio":"bill wurtz - the high class audio.mp3",
+    "Image":"bill wurtz - the high class audio.jpg",
     "Versions":[
-        {"Name":"[NM]","Difficulty":"193","link":"https://api.myjson.com/bins/15znx1"},
-        {"Name":"[HD]","Difficulty":"308","link":"https://api.myjson.com/bins/b916l"},
-        {"Name":"[EX]","Difficulty":"421","link":"https://api.myjson.com/bins/jfjt1"}]},
+        {"Name":"[EZ]","Difficulty":"101","link":"https://api.myjson.com/bins/fkcdx"},
+        {"Name":"[NM]","Difficulty":"160","link":"https://api.myjson.com/bins/snvp1"}]},
+
+    {"Title":"BLACK or WHITE",
+    "Audio":"BlackYooh vs. siromaru - BLACK or WHITE.mp3",
+    "Image":"BlackYooh vs. siromaru - BLACK or WHITE.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"154","link":"https://api.myjson.com/bins/18bkwl"},
+        {"Name":"[NM]","Difficulty":"210","link":"https://api.myjson.com/bins/1fgs5x"},
+        {"Name":"[HD]","Difficulty":"293","link":"https://api.myjson.com/bins/gxn2t"},
+        {"Name":"[EX]","Difficulty":"430","link":"https://api.myjson.com/bins/oqf3p"},
+        {"Name":"[INF]","Difficulty":"484","link":"https://api.myjson.com/bins/kkdv9"}]},
+
+    {"Title":"Pulsar",
+    "Audio":"Celldweller - Pulsar.mp3",
+    "Image":"Celldweller - Pulsar.jpg",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"158","link":"https://api.myjson.com/bins/8sn8l"},
+        {"Name":"[HD]","Difficulty":"264","link":"https://api.myjson.com/bins/fxuhx"}]},
+
+    {"Title":"Orange File",
+    "Audio":"Deadmau5 - Orange File.mp3",
+    "Image":"Deadmau5 - Orange File.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"156","link":"https://api.myjson.com/bins/76ch1"},
+        {"Name":"[NM]","Difficulty":"234","link":"https://api.myjson.com/bins/129691"},
+        {"Name":"[HD]","Difficulty":"328","link":"https://api.myjson.com/bins/92xlx"}]},
+
+    {"Title":"Flashes",
+    "Audio":"Dollscythe - Flashes.mp3",
+    "Image":"Dollscythe - Flashes.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"104","link":"https://api.myjson.com/bins/ndc4l"},
+        {"Name":"[NM]","Difficulty":"208","link":"https://api.myjson.com/bins/tz8xx"},
+        {"Name":"[HD]","Difficulty":"322","link":"https://api.myjson.com/bins/pt7ph"},
+        {"Name":"[EX]","Difficulty":"401","link":"https://api.myjson.com/bins/12bbet"}]},
+
+    {"Title":"Igorrr & Ruby My Dear",
+    "Audio":"Figue Folle - Igorrr & Ruby My Dear.mp3",
+    "Image":"Figue Folle - Igorrr & Ruby My Dear.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"152","link":"https://api.myjson.com/bins/ln6h1"},
+        {"Name":"[NM]","Difficulty":"199","link":"https://api.myjson.com/bins/mu1ol"},
+        {"Name":"[HD]","Difficulty":"285","link":"https://api.myjson.com/bins/116ld1"},
+        {"Name":"[EX]","Difficulty":"360","link":"https://api.myjson.com/bins/l3w11"},
+        {"Name":"[INF]","Difficulty":"460","link":"https://api.myjson.com/bins/lpbmt"},
+        {"Name":"Brutal","Difficulty":"492","link":"https://api.myjson.com/bins/1g2fhh"}]},
+
+    {"Title":"Flower Dance",
+    "Audio":"Flower Dance.mp3",
+    "Image":"Flower Dance.jpg",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"158","link":"https://api.myjson.com/bins/15cmlh"},
+        {"Name":"[HD]","Difficulty":"250","link":"https://api.myjson.com/bins/e0txh"}]},
+
+    {"Title":"Getty vs. DJ DiA - DropZ-Line",
+    "Audio":"Getty vs. DJ DiA - DropZ-Line.mp3",
+    "Image":"Getty vs. DJ DiA - DropZ-Line.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"147","link":"https://api.myjson.com/bins/16da1h"},
+        {"Name":"[NM]","Difficulty":"218","link":"https://api.myjson.com/bins/dsh05"},
+        {"Name":"[HD]","Difficulty":"316","link":"https://api.myjson.com/bins/1d5mc5"},
+        {"Name":"[EX]","Difficulty":"405","link":"https://api.myjson.com/bins/ifnit"},
+        {"Name":"[INF]","Difficulty":"503","link":"https://api.myjson.com/bins/do6ol"}]},
+
+    {"Title":"Getty vs. DJ DiA - Fox4-Raize",
+    "Audio":"Getty vs. DJ DiA - Fox4-Raize.mp3",
+    "Image":"Getty vs. DJ DiA - Fox4-Raize.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"142","link":"https://api.myjson.com/bins/w4mfp"},
+        {"Name":"[NM]","Difficulty":"221","link":"https://api.myjson.com/bins/a8339"},
+        {"Name":"[HD]","Difficulty":"336","link":"https://api.myjson.com/bins/13kr7p"},
+        {"Name":"[EX]","Difficulty":"458","link":"https://api.myjson.com/bins/azy6d"}]},
 
     {"Title":"HAELEQUIN",
     "Audio":"haelequin3.mp3",
@@ -23,7 +92,111 @@
         {"Name":"[HD]","Difficulty":"228","link":"https://api.myjson.com/bins/kkpad"},
         {"Name":"[EX]","Difficulty":"383","link":"https://api.myjson.com/bins/ae6ud"},
         {"Name":"[INF]","Difficulty":"544","link":"https://api.myjson.com/bins/1evnz9"}]},
-        
+
+    {"Title":"Animals",
+    "Audio":"Martin Garrix - Animals.mp3",
+    "Image":"Martin Garrix - Animals.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"114","link":"https://api.myjson.com/bins/i7alh"},
+        {"Name":"[NM]","Difficulty":"172","link":"https://api.myjson.com/bins/cue5h"},
+        {"Name":"[HD]","Difficulty":"222","link":"https://api.myjson.com/bins/vatwl"},
+        {"Name":"[EX]","Difficulty":"319","link":"https://api.myjson.com/bins/jzlet"},
+        {"Name":"[INF]","Difficulty":"358","link":"https://api.myjson.com/bins/1ecp9h"}]},
+
+    {"Title":"overcomplexification",
+    "Audio":"overcomplexification.mp3",
+    "Image":"overcomplexification.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"140","link":"https://api.myjson.com/bins/1fjkh1"},
+        {"Name":"[NM]","Difficulty":"202","link":"https://api.myjson.com/bins/yvfj9"},
+        {"Name":"[HD]","Difficulty":"287","link":"https://api.myjson.com/bins/1c1405"},
+        {"Name":"[EX]","Difficulty":"373","link":"https://api.myjson.com/bins/iuvd1"},
+        {"Name":"[INF]","Difficulty":"450","link":"https://api.myjson.com/bins/vcz2d"}]},
+
+    {"Title":"A Match Into Water",
+    "Audio":"Pierce The Veil - A Match Into Water.mp3",
+    "Image":"Pierce The Veil - A Match Into Water.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"149","link":"https://api.myjson.com/bins/an37p"},
+        {"Name":"[NM]","Difficulty":"221","link":"https://api.myjson.com/bins/n56x1"},
+        {"Name":"[HD]","Difficulty":"309","link":"https://api.myjson.com/bins/ozmw5"},
+        {"Name":"[EX]","Difficulty":"406","link":"https://api.myjson.com/bins/181i91"}]},
+
+    {"Title":"REANIMATE",
+    "Audio":"REANIMATE.mp3",
+    "Image":"REANIMATE.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"137","link":"https://api.myjson.com/bins/1f6pid"},
+        {"Name":"[NM]","Difficulty":"221","link":"https://api.myjson.com/bins/1b0o9x"},
+        {"Name":"[HD]","Difficulty":"324","link":"https://api.myjson.com/bins/hufmt"},
+        {"Name":"[EX]","Difficulty":"415","link":"https://api.myjson.com/bins/9kq1h"}]},
+
+    {"Title":"Hours ft. Lady Leshurr & Paigey Cakey",
+    "Audio":"SON OF KICK - Hours ft. Lady Leshurr & Paigey Cakey.mp3",
+    "Image":"SON OF KICK - Hours ft. Lady Leshurr & Paigey Cakey.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"176","link":"https://api.myjson.com/bins/1fuhzp"},
+        {"Name":"[NM]","Difficulty":"283","link":"https://api.myjson.com/bins/10fdf9"},
+        {"Name":"[HD]","Difficulty":"335","link":"https://api.myjson.com/bins/1diwqd"}]},
+
+    {"Title":"Let Me Hit It",
+    "Audio":"Sporty-O - Let Me Hit It.mp3",
+    "Image":"Sporty-O - Let Me Hit It.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"156","link":"https://api.myjson.com/bins/qwfqt"},
+        {"Name":"[NM]","Difficulty":"230","link":"https://api.myjson.com/bins/112y6t"},
+        {"Name":"[HD]","Difficulty":"352","link":"https://api.myjson.com/bins/1885g5"}]},
+
+    {"Title":"Boogie Woogie Splatter Show",
+    "Audio":"t+pazolite - Boogie Woogie Splatter Show.mp3",
+    "Image":"t+pazolite - Boogie Woogie Splatter Show.jpg",
+    "Versions":[
+        {"Name":"[EX]","Difficulty":"400","link":"https://api.myjson.com/bins/18tl1x"},
+        {"Name":"[SHD]","Difficulty":"639","link":"https://api.myjson.com/bins/c4vxx"}]},
+
+    {"Title":"This Will Be the Day (James Landino Remix)",
+    "Audio":"This Will Be the Day (James Landino Remix).mp3",
+    "Image":"This Will Be the Day (James Landino Remix).jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"118","link":"https://api.myjson.com/bins/h4pph"},
+        {"Name":"[NM]","Difficulty":"208","link":"https://api.myjson.com/bins/brt9h"},
+        {"Name":"[HD]","Difficulty":"314","link":"https://api.myjson.com/bins/1c5ebp"},
+        {"Name":"[EX]","Difficulty":"417","link":"https://api.myjson.com/bins/qpsjp"}]},
+
+    {"Title":"Spider Dance (MARETU Remix)",
+    "Audio":"Toby Fox - Spider Dance (MARETU Remix).mp3",
+    "Image":"Toby Fox - Spider Dance (MARETU Remix).jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"136","link":"https://api.myjson.com/bins/16hzsl"},
+        {"Name":"[NM]","Difficulty":"204","link":"https://api.myjson.com/bins/dx6r9"},
+        {"Name":"[HD]","Difficulty":"257","link":"https://api.myjson.com/bins/1eu29h"},
+        {"Name":"[EX]","Difficulty":"361","link":"https://api.myjson.com/bins/lntmd"},
+        {"Name":"[INF]","Difficulty":"420","link":"https://api.myjson.com/bins/c713p"}]},
+
+    {"Title":"Tomorrow Perfume (tpz Despair Remix)",
+    "Audio":"Tomorrow-Perfume2.mp3",
+    "Image":"Tomorrow-Perfume2.png",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"193","link":"https://api.myjson.com/bins/15znx1"},
+        {"Name":"[HD]","Difficulty":"308","link":"https://api.myjson.com/bins/b916l"},
+        {"Name":"[EX]","Difficulty":"421","link":"https://api.myjson.com/bins/jfjt1"}]},
+
+    {"Title":"Batting Show Perfect Version",
+    "Audio":"TSUNKU - Batting Show Perfect Version.mp3",
+    "Image":"TSUNKU - Batting Show Perfect Version.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"140","link":"https://api.myjson.com/bins/paket"},
+        {"Name":"[NM]","Difficulty":"221","link":"https://api.myjson.com/bins/pw00l"},
+        {"Name":"[HD]","Difficulty":"303","link":"https://api.myjson.com/bins/8mfh1"}]},
+
+    {"Title":"Veritas",
+    "Audio":"veritas1.mp3",
+    "Image":"veritas1.jpg",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"196","link":"https://api.myjson.com/bins/c27c5"},
+        {"Name":"[HD]","Difficulty":"316","link":"https://api.myjson.com/bins/14msnp"},
+        {"Name":"[EX]","Difficulty":"413","link":"https://api.myjson.com/bins/1d524d"}]},
+
     {"Title":"Yeah Boy - Shooting Stars",
     "Audio":"Yeah Boy - Shooting Stars4.mp3",
     "Image":"YeahBoy-ShootingStars4.jpg",
@@ -32,10 +205,21 @@
         {"Name":"[NM]","Difficulty":"147","link":"https://api.myjson.com/bins/yzlud"},
         {"Name":"[HD]","Difficulty":"233","link":"https://api.myjson.com/bins/k5wvp"}]},
 
-    {"Title":"A Strange Reunion (Party Crab remix)",
-    "Audio":"A-Strange-Reunion-(Party-Crab-remix)-5.mp3",
-    "Image":"A-Strange-Reunion-Party-Crab-remix-5.jpg",
+    {"Title":"Yotogibanashi no Kamikakushi",
+    "Audio":"Yotogibanashi no Kamikakushi.mp3",
+    "Image":"Yotogibanashi no Kamikakushi.jpg",
     "Versions":[
-        {"Name":"[EZ]","Difficulty":"174","link":"https://api.myjson.com/bins/dm7p1"},
-        {"Name":"[HD]","Difficulty":"260","link":"https://api.myjson.com/bins/15ll4l"}]}
+        {"Name":"[HD]","Difficulty":"329","link":"https://api.myjson.com/bins/19jaz9"},
+        {"Name":"[EX]","Difficulty":"376","link":"https://api.myjson.com/bins/146ej9"},
+        {"Name":"[INF]","Difficulty":"537","link":"https://api.myjson.com/bins/14ru51"}]},
+
+    {"Title":"AiAe",
+    "Audio":"Yuyoyuppe - AiAe.mp3",
+    "Image":"Yuyoyuppe - AiAe.jpg",
+    "Versions":[
+        {"Name":"[NM]","Difficulty":"175","link":"https://api.myjson.com/bins/83511"},
+        {"Name":"[HD]","Difficulty":"284","link":"https://api.myjson.com/bins/9a08l"},
+        {"Name":"[EX]","Difficulty":"438","link":"https://api.myjson.com/bins/yvn91"},
+        {"Name":"[INF]","Difficulty":"463","link":"https://api.myjson.com/bins/iv32t"},
+        {"Name":"[SHD]","Difficulty":"677","link":"https://api.myjson.com/bins/jgiol"}]}
 ]
