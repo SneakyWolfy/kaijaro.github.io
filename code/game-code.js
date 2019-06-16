@@ -58,7 +58,7 @@ fetch(songUrl).then(function(response){
     console.log(mapData)
     
     TrackAudio = new Audio('../song-audio/'+mapData.General.AudioFilename)
-    TrackAudio.volume = .5
+    TrackAudio.volume = .1
     var TimingPoints = []
     for (var TP of mapData.TimingPoints){
         if (TP.Type == "TimingPoint"){
@@ -202,9 +202,13 @@ fetch(songUrl).then(function(response){
 
     function playHitsound(obj){
         console.log(obj)
+        let soundList = []
         for (var sound of obj.samples){
             sound = new Audio('../hit-sounds/hit'+sound+'.wav')
+            soundList.push(sound)
             //sound.volume = obj.volume
+        }
+        for (var sound of soundList){
             sound.play();
         }
     }

@@ -30,5 +30,12 @@
     "Versions":[
         {"Name":"[EZ]","Difficulty":"107","link":"https://api.myjson.com/bins/pgo5x"},
         {"Name":"[NM]","Difficulty":"147","link":"https://api.myjson.com/bins/yzlud"},
-        {"Name":"[HD]","Difficulty":"233","link":"https://api.myjson.com/bins/k5wvp"}]}
+        {"Name":"[HD]","Difficulty":"233","link":"https://api.myjson.com/bins/k5wvp"}]},
+
+    {"Title":"A Strange Reunion (Party Crab remix)",
+    "Audio":"A-Strange-Reunion-(Party-Crab-remix)-5.mp3",
+    "Image":"A-Strange-Reunion-(Party-Crab-remix)-5.jpg",
+    "Versions":[
+        {"Name":"[EZ]","Difficulty":"174","link":"https://api.myjson.com/bins/dm7p1"},
+        {"Name":"[HD]","Difficulty":"260","link":"https://api.myjson.com/bins/15ll4l"}]}
 ]
