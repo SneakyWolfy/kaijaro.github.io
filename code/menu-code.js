@@ -426,8 +426,8 @@ var musicVolume = document.getElementById("song-volume");
 var effectSlider = document.getElementById("effectRange");
 var effectVolume = document.getElementById("effect-volume");
 
-musicVolume.innerHTML = musicSlider.value+"%"; 
-effectVolume.innerHTML = effectSlider.value+"%"; 
+musicVolume.innerHTML = "Music Volume: "+musicSlider.value+"%"; 
+effectVolume.innerHTML = "Effect Volume: "+effectSlider.value+"%"; 
 var currentMusicVolume = musicSlider.value/100;
 var currentEffectVolume = effectSlider.value/100;
 
@@ -436,14 +436,14 @@ sessionStorage.setItem("effectVolume",currentEffectVolume)
 
 // Update the current slider value (each time you drag the slider handle)
 musicSlider.oninput = function() {
-    musicVolume.innerHTML = this.value+"%";
+    musicVolume.innerHTML = "Music Volume: "+this.value+"%";
     currentMusicVolume = this.value/100;
     volumeChange(currentMusicVolume)
     sessionStorage.setItem("musicVolume",currentMusicVolume)
 } 
 
 effectSlider.oninput = function() {
-    effectVolume.innerHTML = this.value+"%";
+    effectVolume.innerHTML = "Effect Volume: "+this.value+"%";
     currentEffectVolume = this.value/100;
     volumeChange(currentEffectVolume)
     sessionStorage.setItem("effectVolume",currentEffectVolume)
