@@ -178,8 +178,9 @@ function loadaudio(file,preview){
         if (!(length<preview/1000)){
             previewTime = preview/1000;
         }
-        previewAudio.currentTime = previewTime
-        previewAudio.volume = .01;
+        previewAudio.currentTime = previewTime;
+        console.log("setting volulme to "+currentMusicVolume)
+        previewAudio.volume = currentMusicVolume;
         previewAudio.loop = true;
         if (!muted){
             previewAudio.play();
@@ -418,8 +419,95 @@ $("mute").onclick = () => {
 $("play-button").addEventListener("click",aniPlayBtn)
 
 
+//slider functions (options)
 
+var musicSlider = document.getElementById("volumeRange");
+var musicVolume = document.getElementById("song-volume");
+var effectSlider = document.getElementById("effectRange");
+var effectVolume = document.getElementById("effect-volume");
 
+musicVolume.innerHTML = musicSlider.value+"%"; 
+effectVolume.innerHTML = effectSlider.value+"%"; 
+var currentMusicVolume = musicSlider.value/100;
+var currentEffectVolume = effectSlider.value/100;
+
+sessionStorage.setItem("musicVolume",currentMusicVolume)
+sessionStorage.setItem("effectVolume",currentEffectVolume)
+
+// Update the current slider value (each time you drag the slider handle)
+musicSlider.oninput = function() {
+    musicVolume.innerHTML = this.value+"%";
+    currentMusicVolume = this.value/100;
+    volumeChange(currentMusicVolume)
+    sessionStorage.setItem("musicVolume",currentMusicVolume)
+} 
+
+effectSlider.oninput = function() {
+    effectVolume.innerHTML = this.value+"%";
+    currentEffectVolume = this.value/100;
+    volumeChange(currentEffectVolume)
+    sessionStorage.setItem("effectVolume",currentEffectVolume)
+} 
+
+function volumeChange(volume){
+    if (volume*100%10==0&!muted){
+        let sound = new Audio('Menu-sfx/volume-change.wav');
+        sound.volume = volume;
+        sound.play();
+    }
+}
+
+/////changing keybinds
+if (sessionStorage.getItem("keybinds")==null){
+    sessionStorage.setItem("keybinds",["KeyA","KeyS","KeyD","KeyF"])
+} 
+
+var keybinds = sessionStorage.getItem("keybinds").split(",");
+for (var i=0;i<4;i++){
+    console.log(keybinds)
+    $("key"+i).innerText=keybinds[i].slice(3)
+}
+
+function updateBinding(ev){
+    unFocus(ev.code)
+    if (focus<3){
+        setFocus(focus+1)
+        
+    } else {
+        document.removeEventListener("keyup",updateBinding)
+        debounceAni = true;
+        sessionStorage.setItem("keybinds",keybinds)
+        console.log(sessionStorage.getItem("keybinds"));
+    }
+}
+
+var focus;
+
+function unFocus(value){
+    keybinds[focus]=value
+    console.log($("key"+focus).style)
+    $("key"+focus).innerText=value.slice(3);
+    $("key"+focus).style.backgroundColor="rgba(0,0,0,0)"
+}
+
+function setFocus(value){
+    focus=value
+    $("key"+focus).innerText="";
+    $("key"+focus).style.backgroundColor="aliceblue"
+}
+
+$("ck-button").onclick = function(){
+    if (debounceAni){
+        debounceAni = false;
+        setFocus(0)
+
+        document.addEventListener("keyup",updateBinding);
+
+        //remove kebinds an change text
+        //create event listener that checks key and validates it if it's good
+        //after 4 validations inable animations
+    }
+}
 //Background movment
 addEventListener("mousemove",(e) => {
     var amountMovedX = (e.pageX * -1 / 64);
@@ -430,7 +518,7 @@ addEventListener("mousemove",(e) => {
 function loadGame(){
     if (debounceAni){
         debounceAni=false;
-        sessionStorage.setItem("keybinds",["KeyA","KeyS","KeyD","KeyF"])
+        
         sessionStorage.setItem("url",songurl)
         window.open("html/game.htm","_self")
         debounceAni=true;

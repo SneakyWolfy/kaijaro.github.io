@@ -58,7 +58,7 @@ fetch(songUrl).then(function(response){
     console.log(mapData)
     
     TrackAudio = new Audio('../song-audio/'+mapData.General.AudioFilename)
-    TrackAudio.volume = .1
+    TrackAudio.volume = sessionStorage.getItem("musicVolume")
     var TimingPoints = []
     for (var TP of mapData.TimingPoints){
         if (TP.Type == "TimingPoint"){
@@ -205,7 +205,7 @@ fetch(songUrl).then(function(response){
         for (var sound of obj.samples){
             sound = new Audio('../hit-sounds/hit'+sound+'.wav')
             soundList.push(sound)
-            //sound.volume = obj.volume
+            sound.volume = sessionStorage.getItem("musicVolume")
         }
         for (var sound of soundList){
             sound.play();
@@ -315,6 +315,9 @@ fetch(songUrl).then(function(response){
                 offsetTimer = offsetTimerTime;
                 TrackAudio.autoplay = true;
                 TrackAudio.play()
+                TrackAudio.onended = function() {
+                    window.open("../index.htm","_self");
+                }; 
             }, offsetTimerTime);
         }
     }
@@ -325,14 +328,3 @@ fetch(songUrl).then(function(response){
     }
 })
 
-/*
-function KeyboardEvent(ev){     
-    var key = ev.code;
-    if (keybinds.includes(key) && debounce[keybinds.indexOf(key)]){//[keybinds.indexOf(key)]
-        debounce[keybinds.indexOf(key)] = false;
-        playHitsound()
-        columnInput[keybinds.indexOf(key)] = columnInputActive[keybinds.indexOf(key)]
-        checkHit(keybinds.indexOf(key))
-    }
-}
-*/

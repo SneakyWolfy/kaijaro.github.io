@@ -10,7 +10,7 @@
 </head>
     <body>
         <header id='Title' class="screen1">
-            <p>Taps v1.28</p>
+            <p>Taps v1.29</p>
         </header>
 
         <main class="screen1" id="main-options-list">
@@ -54,21 +54,46 @@
                 Options
             </header>
             <ul id="option-contents">
-                <li id=keyBinds>
+                <li>
                     <div id="ck-button-container">
                         <button id="ck-button" class="hoverinverse">
                             Change KeyBinds
                         </button>
                     </div>
                     <div id="keybind-display">
-                        <div class="ck-show"></div>
-                        <div class="ck-show"></div>
-                        <div class="ck-show"></div>
-                        <div class="ck-show"></div>
+                        <div class="ck-show" id="key0"></div>
+                        <div class="ck-show" id="key1"></div>
+                        <div class="ck-show" id="key2"></div>
+                        <div class="ck-show" id="key3"></div>
+                    </div>
+                </li>
+                <li>
+                    <div id="ck-button-container">
+                        <div id="song-volume" class="volume-display">
+                            25%
+                        </div>
+                    </div>
+                    <div id="Scroll-display">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="25" class="slider" id="volumeRange">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="ck-button-container">
+                        <div id="effect-volume" class="volume-display">
+                            25%
+                        </div>
+                    </div>
+                    <div id="Scroll-display">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="25" class="slider" id="effectRange">
+                        </div>
                     </div>
                 </li>
             </ul>
         </main>
+
         <button id="back" class="screen2 screen3">
             Back
         </button>
