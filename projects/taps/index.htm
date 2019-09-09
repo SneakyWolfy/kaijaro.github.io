@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taps</title>
+    <link rel="stylesheet" href="styles/menu-style.css">
+    <script src="code/menu-code.js" defer></script>
+</head>
+    <body>
+        <header id='Title' class="screen1">
+            <p>Taps v1.29.2</p>
+        </header>
+
+        <main class="screen1" id="main-options-list">
+            <button class="screen1 main-button hoverinverse" id="play-button">
+                Play
+            </button>
+            <button class="screen1 main-button hoverinverse" id="option-button" onclick="window.aniOptionBtn()">
+                Options
+            </button>
+        </main>
+
+        <main id="screen2" class="screen2">
+            <div id="imageBox" class="imageStyle"></div>
+            <div id="imageFade" class="imageFade"></div>
+            
+            <div id="songInfoContainer">
+                <ul id="InfoList">
+                    <li id="title"> a very long title name - a very long artist name</li>
+                    <li id="creator">Created by [creator]</li>
+                </ul>
+            </div>
+            <div id="difBox">
+                <div id="difBoxContainer">
+                    <button id="dif0" class="dif screen2 hoverinverse"><p>wdwd</p></button>
+                    <button id="dif1" class="dif screen2 hoverinverse"><p>wdwd</p></button>
+                    <button id="dif3" class="dif screen2 hoverinverse"><p>wdwd</p></button>
+                </div>
+                <div id="playDifContainer">
+                    
+                </div>
+            </div>
+
+            <div id="song-container" class="">
+                <div id="song-overflow" class="">
+                </div>
+            </div>
+        </main>
+
+        <main id="screen3" class="screen3">
+            <header id="option-display">
+                Options
+            </header>
+            <ul id="option-contents">
+                <li>
+                    <div id="ck-button-container">
+                        <button id="ck-button" class="hoverinverse">
+                            Change KeyBinds
+                        </button>
+                    </div>
+                    <div id="keybind-display">
+                        <div class="ck-show" id="key0"></div>
+                        <div class="ck-show" id="key1"></div>
+                        <div class="ck-show" id="key2"></div>
+                        <div class="ck-show" id="key3"></div>
+                    </div>
+                </li>
+                <li>
+                    <div id="ck-button-container">
+                        <div id="song-volume" class="volume-display">
+                            25%
+                        </div>
+                    </div>
+                    <div id="Scroll-display">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="25" class="slider" id="volumeRange">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="ck-button-container">
+                        <div id="effect-volume" class="volume-display">
+                            25%
+                        </div>
+                    </div>
+                    <div id="Scroll-display">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="25" class="slider" id="effectRange">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+
+        <button id="back" class="screen2 screen3">
+            Back
+        </button>
+
+        <button id="mute" class="">
+            <img id="off" class="mutologo" src="https://learnwebsitedesign.com/svg-icons/svg-music-play-button-icon-2/svg-music-play-button-icon-2.svg" alt="Muted">
+            <img id="on" class="mutologo" src="https://learnwebsitedesign.com/svg-icons/svg-pause-button-icon-2/svg-pause-button-icon-2.svg" alt="Muted">
+        </button>
+
+    </body>
+</html>
