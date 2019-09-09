@@ -255,7 +255,7 @@ function load(){
         }
         loadaudio("https://kaijaro.github.io/projects/taps/song-audio/"+audioName,audioPreview)
         
-        loadBG("projects/taps/song-bg"+image,function(response){
+        loadBG("projects/taps/song-bg/"+image,function(response){
             console.log($("imageBox").style.backgroundImage)
             console.log("song-bg/"+image)
             console.log("url("+"song-bg/"+image+")")
