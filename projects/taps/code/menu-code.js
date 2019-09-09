@@ -253,7 +253,7 @@ function load(){
 
             $('difBoxContainer').innerHTML += "<button id=\"dif"+difNum+"\" class=\"dif "+DifColor+"\" onclick=\"selectDif("+difNum+")\"><p>"+SongData[songIndex].Versions[difNum].Name+"</p></button>";
         }
-        loadaudio("https://kaijaro.github.io/song-audio/"+audioName,audioPreview)
+        loadaudio("https://kaijaro.github.io/projects/taps/song-audio/"+audioName,audioPreview)
         
         loadBG("projects/taps/song-bg"+image,function(response){
             console.log($("imageBox").style.backgroundImage)
