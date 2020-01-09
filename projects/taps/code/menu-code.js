@@ -249,8 +249,6 @@ function load(){
         var DifColor;
         for (var difNum = 0;difNum<SongData[songIndex].Versions.length;difNum++){
             DifColor = getVersionColor(SongData[songIndex].Versions[difNum].Name)
-            
-
             $('difBoxContainer').innerHTML += "<button id=\"dif"+difNum+"\" class=\"dif "+DifColor+"\" onclick=\"selectDif("+difNum+")\"><p>"+SongData[songIndex].Versions[difNum].Name+"</p></button>";
         }
         loadaudio("https://kaijaro.github.io/projects/taps/song-audio/"+audioName,audioPreview)

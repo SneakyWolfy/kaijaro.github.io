@@ -1,0 +1,46 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --primaryColor: rgb(80, 76, 76);
+    --secondaryColor: rgb(51, 54, 54);
+    --mainBackgroundColor: aliceblue;
+}
+
+#topDiv {
+    background-color: var(--secondaryColor);
+    height:15vh;
+    width:100%;
+    float: left;
+}
+
+#leftAside {
+    background-color: var(--primaryColor);
+    height:75vh;
+    width: 12.5%;;
+    float: left;
+}
+
+#mainCanvas {
+    background-color: var(--mainBackgroundColor);
+    height:75vh;
+    width: 75%;;
+    float: left;
+}
+
+#rightAside {
+    background-color: var(--primaryColor);
+    height:75vh;
+    width: 12.5%;;
+    float: right;
+}
+
+#bottomDiv {
+    background-color: var(--secondaryColor);
+    height: 10vh;
+    width: 100%;
+    clear: both;
+}
+
