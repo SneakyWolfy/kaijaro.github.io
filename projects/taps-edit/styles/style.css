@@ -9,7 +9,7 @@ body{
     --mainBackgroundColor: aliceblue;
 }
 
-#topDiv {
+#FileDiv {
     background-color: var(--secondaryColor);
     height:15vh;
     width:100%;
@@ -44,3 +44,10 @@ body{
     clear: both;
 }
 
+#testDrag {
+    position: absolute;
+    width:200px;
+    height:200px;
+    z-index: 1;
+    background-color: white;
+}
