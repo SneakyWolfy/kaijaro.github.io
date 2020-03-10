@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(22, 23, 24);
+    display: flex;
+    justify-content: center;
+}
+
+#game{
+    background-color: white;
+    width: 720px;
+    margin-top: 1em;
+    height: 480px;
+}

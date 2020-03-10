@@ -5,7 +5,11 @@ var path = new Path.Circle({
 	radius: 30,
 	strokeColor: 'black'
 });
-console.log('efe')
+
+view.onFrame = function(e){
+    
+}
+
 function onResize(event) {
 	// Whenever the window is resized, recenter the path:
 	path.position = view.center;
