@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #111117;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+}
+
+canvas {
+    width: 1067px; 
+    height: 600px; 
+    background-color: white; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#scoreContainer {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw; 
+    top:1rem;
+    color: #111;
+    font-size: 1.5rem;
+}
+#currentScoreContainer{
+    padding: 0 0 0.2rem 0;
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+}

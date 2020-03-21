@@ -1,0 +1,17 @@
+Vπ(s) = R(s, π(s), s’) + Vπ(s’)
+Value (V) iteration (π) of state (s) is equal to
+
+sum of r of () plus the iteration of the next state
+
+S_n = set of states, S_1 = state number 1
+A_m = set of actions, A_1 = action number 1
+R = reward function where a value is given based off of
+    the current state, action, and value of next state
+P_ij^a = transition function where SxA->S_1
+
+π = any state
+
+we want to know π: s->r
+
+
+
