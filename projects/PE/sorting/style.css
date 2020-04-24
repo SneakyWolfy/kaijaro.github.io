@@ -1,0 +1,31 @@
+body {
+  background-color: aliceblue;
+}
+
+#container {
+  background-color: white;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  display: flex;
+  padding: 2em 0;
+  align-content: center;
+  flex-flow: column;
+}
+
+.box {
+
+  margin: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 20px;
+}
+
+.button{
+  height: 60px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
