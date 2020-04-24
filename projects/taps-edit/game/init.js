@@ -13,8 +13,6 @@ var skinList = [
   `- GomDogs skin`,
   `#azer8dawn`,
   `#xblue+chitanda`, 
-
-  
 ]
 
 /*
