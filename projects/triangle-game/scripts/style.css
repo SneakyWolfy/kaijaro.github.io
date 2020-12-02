@@ -1,0 +1,446 @@
+:root {
+  --gameSize: 35vh;
+  --headerHeight: 12.5rem;
+
+  /* Colors */
+  --primary: hsl(320, 50%, 40%);
+  --primary-light: hsl(320, 50%, 55%);
+  --secondary: hsl(240, 50%, 40%);
+  --secondary-light: hsl(240, 50%, 55%);
+  --tertiary: hsl(270, 50%, 40%);
+  --tertiary-light: hsl(275, 50%, 55%);
+  --dark: hsl(226, 26%, 16%);
+
+  --light: hsl(270, 50%, 10%);
+  --light-secondary: hsl(200, 50%, 10%);
+  --light2: hsl(277, 50%, 20%);
+  --light-secondary2: hsl(196, 50%, 20%);
+
+  --bg-grad: linear-gradient(to left top, hsl(230, 80%, 5%), hsl(280, 80%, 5%));
+
+  --light-grad: linear-gradient(
+    to left top,
+    var(--light),
+    var(--light-secondary)
+  );
+
+  --light-grad2: linear-gradient(
+    to left top,
+    var(--light-secondary2),
+    var(--light2)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  position: relative;
+  z-index: -10;
+  height: 100vh;
+  background-image: var(--bg-grad);
+}
+
+.header {
+  color: rgb(221, 221, 221);
+  user-select: none;
+  line-height: var(--headerHeight);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+.grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--headerHeight) var(--gameSize) 4fr 1fr;
+}
+
+.game-view {
+  width: 100%;
+}
+
+.modal {
+  display: flex;
+  border-radius: 10%;
+  border-top-right-radius: 0;
+  flex-direction: column;
+  position: absolute;
+  width: 80vw;
+  max-width: 500px;
+  height: 90vh;
+  top: 5vh;
+
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: var(--light-grad);
+  opacity: 0.925;
+
+  transition-property: opacity;
+  transition-duration: 400ms;
+  z-index: 21;
+}
+
+.modal-shade {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  position: absolute;
+
+  transition-property: background-color filter;
+  transition-duration: 100ms;
+}
+
+.blur-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: blur(4px);
+}
+
+.hide-modal {
+  animation-name: hide;
+  animation-duration: 500ms;
+  z-index: -20;
+  opacity: 0;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    z-index: 20;
+  }
+  99% {
+    z-index: 20;
+  }
+  100% {
+    z-index: -20;
+    opacity: 0;
+  }
+}
+
+.close-modal {
+  z-index: 20;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: aliceblue;
+  transition-property: background-color, color;
+  transition-duration: 400ms;
+}
+.close-modal:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.modal-content {
+  display: flex;
+  margin: 7.5% 5% 0 5%;
+  flex-direction: column;
+}
+
+.modal-item {
+  display: grid;
+  height: 3rem;
+  width: 100%;
+
+  margin-top: 1rem;
+  grid-template-columns: 3fr 1fr;
+}
+
+.modal-item-label {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  text-align: left;
+
+  color: aliceblue;
+}
+
+.modal-item:hover > .modal-item-label {
+  background-image: var(--light-grad2);
+  color: white;
+}
+.modal-item-btn {
+  border: 1px solid;
+  font-size: 1.25rem;
+  background-color: transparent;
+  color: aliceblue;
+  cursor: pointer;
+  border-color: gray;
+  transition-property: color background-color border-color;
+  transition-duration: 400ms;
+}
+
+.btn-active {
+  border-color: greenyellow;
+}
+.modal-item-btn:hover {
+  color: black;
+  background-color: aliceblue;
+}
+.game-bg {
+  background-image: var(--light-grad);
+  z-index: -1;
+  border-radius: 100%;
+  position: absolute;
+  border: 2px solid black;
+
+  --length: calc(var(--gameSize) * (4 / 3));
+  --radius: calc(var(--length) / 2);
+  height: var(--length);
+  width: var(--length);
+
+  left: calc(50% - var(--radius));
+  top: calc(var(--headerHeight) + (var(--gameSize) * 0.6) - var(--radius));
+}
+.game-win {
+  border: 2px solid greenyellow;
+}
+
+.game-lose {
+  border: 2px solid crimson;
+}
+
+.game-container {
+  display: flex;
+  border-radius: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  height: var(--gameSize);
+  width: var(--gameSize);
+}
+
+.row-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.game-btn {
+  border: 1px solid;
+  border-radius: 100%;
+  cursor: pointer;
+  transition-property: border-color background-color height width;
+  transition-duration: 400ms;
+}
+
+.game-btn-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--gameSize) / 5);
+  height: calc(var(--gameSize) / 5);
+}
+
+/* filled */
+
+.btn-filled {
+  background-color: var(--primary);
+  width: calc(var(--gameSize) / 10);
+  height: calc(var(--gameSize) / 10);
+  border-color: var(--primary);
+}
+
+.game-btn-container:hover > .btn-filled {
+  border-color: white;
+}
+
+/* Highlight */
+
+.container-highlight {
+  background-image: radial-gradient(
+    closest-side,
+    var(--secondary),
+    transparent
+  );
+}
+
+.btn-highlight {
+  background-color: var(--secondary);
+
+  width: calc(var(--gameSize) / 10);
+  height: calc(var(--gameSize) / 10);
+  border-color: var(--secondary);
+}
+
+.container-highlight:hover > .btn-highlight {
+  border-color: white;
+}
+
+/* Helper */
+
+.btn-helper {
+  background-color: var(--tertiary);
+
+  width: calc(var(--gameSize) / 10);
+  height: calc(var(--gameSize) / 10);
+  border-color: var(--tertiary-light);
+}
+
+.container-helper:hover > .btn-helper {
+  border-color: white;
+}
+
+/* Helper-w */
+.btn-helper-w {
+  background-color: var(--tertiary);
+
+  width: calc(var(--gameSize) / 10);
+  height: calc(var(--gameSize) / 10);
+  border-color: rgb(133, 196, 40);
+}
+
+.container-helper-w :hover > .btn-helper {
+  border-color: white;
+}
+/* Helper-l */
+.btn-helper-l {
+  background-color: var(--tertiary);
+
+  width: calc(var(--gameSize) / 10);
+  height: calc(var(--gameSize) / 10);
+  border-color: rgb(255, 23, 23);
+}
+
+.container-helper-l:hover > .btn-helper {
+  border-color: white;
+}
+/* empty */
+
+.btn-empty {
+  background-color: var(--dark);
+  width: calc(var(--gameSize) / 20);
+  height: calc(var(--gameSize) / 20);
+  border-color: var(--primary);
+}
+.btn-empty:hover {
+  border-color: var(--primary-light);
+}
+
+/* empty highlight */
+
+.container-empty-highlight {
+  background-image: radial-gradient(
+    closest-side,
+    var(--secondary),
+    transparent
+  );
+}
+
+.btn-empty-highlight {
+  background-color: var(--secondary-light);
+  width: calc(var(--gameSize) / 20);
+  height: calc(var(--gameSize) / 20);
+  border-color: var(--secondary-light);
+}
+
+.container-empty-highlight:hover > .btn-empty-highlight {
+  border-color: white;
+}
+
+/* empty helper */
+
+.btn-empty-helper {
+  background-color: var(--dark);
+  width: calc(var(--gameSize) / 20);
+  height: calc(var(--gameSize) / 20);
+  border-color: var(--tertiary);
+}
+.container-empty-helper:hover > .btn-empty-helper {
+  border-color: var(--tertiary-light);
+}
+
+/* empty helper-w */
+
+.container-empty-helper-w {
+  background-image: radial-gradient(
+    closest-side,
+    var(--secondary),
+    transparent
+  );
+}
+
+.btn-empty-helper-w {
+  background-color: var(--dark);
+  width: calc(var(--gameSize) / 20);
+  height: calc(var(--gameSize) / 20);
+  border-color: green;
+}
+.container-empty-helper-w:hover > .btn-empty-helper-w {
+  border-color: white;
+}
+
+/* empty helper-l */
+
+.container-empty-helper-l {
+  background-image: radial-gradient(closest-side, var(--tertiary), transparent);
+}
+
+.btn-empty-helper-l {
+  background-color: var(--dark);
+  width: calc(var(--gameSize) / 20);
+  height: calc(var(--gameSize) / 20);
+  border-color: red;
+}
+.container-empty-helper-l:hover > .btn-empty-helper-l {
+  border-color: white;
+}
+
+.options-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.options-btn {
+  width: 15vw;
+  height: 7.5vh;
+  min-height: 3rem;
+  min-width: 5rem;
+  max-width: 10rem;
+
+  margin: 0 0.5rem;
+
+  border-radius: 20%;
+  border: 2px solid black;
+
+  align-self: end;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
+  font-size: 3vmin;
+  background-image: var(--light-grad);
+}
+
+.options-btn:hover {
+  background-image: var(--light-grad2);
+}
+
+.guide-container {
+  display: flex;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.guide-message {
+  align-self: center;
+
+  color: aliceblue;
+}

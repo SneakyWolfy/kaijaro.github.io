@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="#"" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js" type="module"></script>
+    <title>Triangle Game</title>
+  </head>
+  <body>
+    <div class="modal-shade">
+      <main class="grid">
+        <header class="header">Triangle Game</header>
+        <section class="game-view" class="section">
+          <div class="game-container"></div>
+          <div class="game-bg"></div>
+        </section>
+        <section>
+          <div class="options-container">
+            <button class="options-btn reset-btn">Reset</button>
+            <button class="options-btn undo-btn">Undo</button>
+            <button class="options-btn option-btn">Options</button>
+          </div>
+        </section>
+        <section>
+          <div class="guide-container">
+            <p class="guide-message">Select any node to start!</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="modal options-modal hide-modal">
+      <button class="close-modal">✗</button>
+      <div class="modal-content">
+        <div class="modal-item">
+          <label class="modal-item-label">Show Nodes With Moves</label>
+          <button class="modal-item-btn modal-item-btn-finder">On</button>
+        </div>
+        <div class="modal-item">
+          <label class="modal-item-label"><p>Show Calculated Moves</p></label>
+          <button class="modal-item-btn modal-item-btn-helper">On</button>
+        </div>
+        <div class="modal-item">
+          <label class="modal-item-label">Edit Mode</label>
+          <button class="modal-item-btn modal-item-btn-edit">Off</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
